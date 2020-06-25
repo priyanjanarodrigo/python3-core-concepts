@@ -1,0 +1,176 @@
+=============================================================================================
+1. Standard flavours of Python
+=============================================================================================
+
+	1. CPython 	
+		- can be used to work with C language applications
+		
+	2. Jython or JPython
+		- Python version to work with java applications
+		
+	3. IronPython
+		- Python version to work with .NET (C#) applications
+	
+	4. PyPy 
+		- Python for speed. Inside Python Virtual Machine (PVM) JIT compiler (Just In Time compiler) 
+		  will be there. Performance is improved
+	
+	5. RubyPython
+		- Python version to work with Ruby applications
+	
+	6. AnacondaPython
+		- For big data handling. To handle huge data
+	
+	7. Stackless
+		- Python for concurrency (multi threading)
+
+
+=============================================================================================
+2. Python versions [Current version 3.8.1 (on 02/20/2020)]
+=============================================================================================	
+	
+	1. Major Python Versions
+	
+		- Python 1.0 - Introduced in January 1994 (Almost gone)
+		- Python 2.0 - Introduced in October 2000
+		- Python 3.0 - Introduced in December 2008 (The most pwerful version)
+	
+	2. Any new version should provide suport for old versions (Software rules).
+	   In Python there is no backward compatibility. Version 3 does not support version 2.
+	   
+		Ex : 
+			- print 'Hello' - Valid in Python 2 but not in Python 3. Python 3 - print('Hello')
+			- long data type - Available in Python 2 but not in Python 3
+			
+	3. Upto 2020, Python 2 will get support and then support is ended
+	
+	4. Reason for this is to provide new features adn functionality
+
+=============================================================================================	
+3. Basic concepts
+=============================================================================================	
+
+	1. Identifiers
+	
+		- A name which can be used for identification purpose in Python is called an identifier.
+		  It may be a variable name, class name or a method/function name.
+		
+			Variable names : 
+				myValue=10
+			
+			Function/ method names : 
+				def f1():
+					print('Hello')
+			
+			Class Name
+				class Test(Exception):
+		
+		- Rules to define identifiers in Python
+			
+			1. Alphabet symbols can be used (both upper and lower cases) 
+				
+				cash=10	- valid
+				ca$h=10 - invalid ($ sign has been used)
+			
+			2. We can use digits (0 to 9) also but should not start with a digit
+				
+				total123=234	- valid
+				123total=202	- invalid
+			
+			3. Underscore _ can be used. No other special symbols are allowed
+			
+				num_test=20	- valid
+				_myVal=34	- valid
+				
+			4. Python identifiers are case sensitive. Python itself is a case sensitive programming language
+				
+				total=10
+				TOTAL=20
+				Total=12
+				toTAl=20
+				
+				All of the above decalrations are valid and unique
+			
+			5. Reserved words/ key words are not allowed to use as as identifiers
+				
+				if=10	- invalid
+				def=True- invalid
+			
+			6. There is no length limit for defining a Python identifier. But not recommended to take too lengthy
+			   identifiers
+			   
+			
+			Ex: 
+				123Total	- invalid (can use digits but cannot start with a digit)
+				total123	- valid
+				java2share	- valid
+				ca$h		- invlid ($ is not allowed)
+				_abc_abc_	- valid
+				def			- invalid (keywords)
+				if			- invalid (keywords)
+		
+		> IMPORTANT
+		
+			* If the identifier starts with an underscore symbol (_num1), it indicates that it is private
+			* If the identifier starts with two underscores sybmols (__num1), it indicates that it is strongly private
+			* If an identifier is starting with two underscores and also ends with two underscores (__main__), 
+			  it indicates that it is a language specific identifier. It is a special variable defined by Python itself
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

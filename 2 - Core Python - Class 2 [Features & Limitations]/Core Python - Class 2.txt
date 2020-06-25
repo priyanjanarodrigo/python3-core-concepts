@@ -1,0 +1,155 @@
+=============================================================================================
+1. Features of Python
+=============================================================================================
+
+	1. Simple and easy to learn. More human friendly and readable (ex : for i in range(10))
+		- In Java there are 53 key words. But in Python there are only 30 key words
+		- Concise code with simplicity (Less number of code lines)
+			ex : x=10 if a>b else 20
+			
+	2. Python is freeware and no need to pay 
+		- We do not need to pay single cent and license related issues will not be there
+		
+	3. Python is Opensource
+		- We are able to view the source code and check the way it has been implemented
+		- We can customise the code also and have our own version of Python 
+			ex : Jython is a customysed version of Python to wirk with Java
+	
+	4. Hgh level programming language
+		- Ease of human understandability / more human readable, understandable 
+		- Programmer friendly
+	
+	5. Platform independent just like Java (WORA)
+		- Write once run anywhere. Same program wrote on windows machine 
+		  can be executed in any other machines with different operating systems
+	
+	6. Portability 
+		- Can be be migrated one platfrom to another different platform without making 
+		  any changes (Moving from one platform to another platform without making any changes)
+
+		
+		Platform independence => 
+		
+				------------------
+				| Python program |
+				------------------
+						|
+			-------------------------------------
+			|			  |			|			|
+			Windows		Linux		Mac		Sun Solaris
+	
+		Portability
+			- Migrating a Python program from Windows to MacOS without any changes
+			
+	7. Dynamically typed language
+		- No need to declare types from the variables. Based on the assigned value, type will be considered.
+		  Type will be dynamically assigned based on the value
+		  We do not need to explicitly define a data type
+		
+		........................................................
+		val=23
+		print(type(val))
+		
+		val=False
+		print(type(val))
+		
+		val=23.43
+		print(type(val))
+		........................................................
+		
+		output : 
+			<class 'int'>
+			<class 'bool'>
+			<class 'float'>
+	
+	8. Both procedure oriented and object oriented. All the OOP features and also the Procedure oriented 
+	   features are available in Python
+	
+		- Procedural way - without a class
+			........................................................
+			id=102
+			def f1():
+				print("Your id is : ",id)
+			f1()
+			........................................................
+		
+	9. Interpreted
+	
+		- We do not need to compile. Python interpreter will check all the syntactical issues and then run internally
+		
+	10. Python is extensible
+	
+		- We can use already existing other language programs in Python (java,c programs)
+		  if we already have some java code (Assume 10000k lines) it can be executed using python.
+		  Therefore, native support is there 
+		  
+		- We can improve performance by implementing funcitonality using other language features.		 
+			 Ex : If python does something slowy but Java does it quickly, then we can use Java to implement 
+				  that particular functionality (Can implement performance crutial components with other 
+				  languages and bring in to Python)
+				  
+		- This may cause to miss overall platform independence advantage and other benefits
+		
+	11. Embedded
+		
+		- We can use Python programs in other languages. Compatible to work with other languages.
+		  Python programs can be embedded anywhere (Interoperability)
+	
+	12. Extensive library. Availability of rich libraries and existing features
+	
+		ex 1 : math
+			
+			........................................................
+			import math
+			print(math.sqrt(4))
+			........................................................
+		
+			output : 
+				2.0
+				
+				
+		ex 2 : random
+			........................................................
+			from random import*
+			print(randint(0,9),randint(0,9),randint(0,9))
+
+
+			# Generating a sample OTP - One Time Password
+			#removing separated spaces with sep 
+			print(randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),randint(0,9),sep='')
+			........................................................
+		
+			output : 
+				7 5 4
+				132080
+	
+=============================================================================================
+2. Limitations of Python
+=============================================================================================	
+
+	1. Performance wise not up to the mark because it is an interpreterd programming language
+	
+	2. Not that much frequenty used for developing mobile application
+	
+
+( Myth : Python is not suitable for large scale applications)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,232 @@
+
+* Recap from previous session
+
+ - dict (Dictionary)
+    Key -> Value pairs
+
+- Initializing an empty dict  
+    d = {}
+   
+- Initializing an empty set  
+    s = set()
+
+list -->    []
+touple -->  ()
+
+1. In Python following 5 are considered as fundamental data types
+    
+    int
+    float
+    complex
+    bool
+    str
+
+ - All fundamental data types are immutable
+ - long data type is available only in python2 not in python3. Even if it is a big number, it is represented 
+   with int type in Python3
+ - Single characters are also represented with str type. There is no such thing as char in Python 
+   (we can use single,double or triple quote also to represent a str)
+
+2. following are advanced data tyes 
+
+    bytes (immutable) and byteArray (mutable)
+        Generally, these two can be used to represent binary data specially (images, video, audio files and etc)
+
+=============================================================================================	
+ > Continued - Data type summaries
+=============================================================================================
+
+* FUNDAMENTAL DATA TYPES
+---------------------------------------------------------------------------------------------
+
+ 1. int
+    - Used to represent whole numbers (the numbers without decimal points)
+    - int is immutable
+
+2. float
+    - Used to represent numbers with decimal ponts (ex : pi = 3.14)
+    - float is immutable
+
+3. complex
+    - Used to represent complex numbers (ex: val = 10.2+22.3j)
+    - Format/syntax is a+bj. 'j' is mandatory to use otherwise errors will be occured
+    - a is considered as real part
+    - b is considered as imaginary part
+    - complex type is immutable
+
+4. bool
+    - User to represent boolean values (True or False)
+    - Only allowed values are True or False. Or else errors will be occured
+    - Internally True is represented with 1 and False is represented as 0
+    - Example : 
+        print(True+True) # output is: 2
+        print(True+False) # output is: 1
+    - bool is immutable
+
+5. str
+    - Most commonly used data type (Not only in Python but in any programming language as well)
+    - Used to represent a sequence of characters
+    - Can specify between single,double or triple quotes
+        s1 = 'My Name is Rodrigo'
+        s1 = "This is some text between double quotes"
+        s1 = '''This is 
+               a multi line
+               str literal'''
+    - str is immutable
+
+
+* ADVANCED DATA TYPES
+---------------------------------------------------------------------------------------------
+
+6. bytes
+    - Used to represent a group of byte values in between 0 to 256 range only
+    - Ex :
+        l = [12,32,256,34]
+        b = bytes(l)
+    - We will get error if we are taking values out of the range of 0 to 256
+    - Can access using index
+    - bytes is immutable, item assignment is not allowed
+
+7. byteArray
+    - Used to represent a group of byte values in between 0 to 256 range only where mutability is applicable
+    - The same as bytes but byteArray is mutable
+    - Ex:
+        bArr = byteArray([12,32,34,54])
+    - These two types are generally used if we want to use binary data (audio,video and etc)
+
+8. range
+    - If we want to represent a range of values we can use range
+    - Ex: 
+        # form 1 : range(end)
+        # Representing range of 0 to 9 (0 to end -1)
+        r = range(10)
+
+        # form 1 : range(start, end)
+        # Representing range of 10 to 30 (start to end -1)
+        r2 = range(10,31)
+
+        # form 1 : range(start, end, step)
+        # Representing range of 10 to 30 stepping/ increment by 5(start to end -1 stepping 5)
+        r2 = range(10,31,5)
+    
+    - range is immutable
+
+9. list
+    - If we want to represent a group of object as a single entity where
+        insertion order is preserved
+        duplicates are allowed
+        None is allowed
+        hetrogeneous objects are allowed
+        growable in nature
+        we should use list data type
+    - Ex:
+        l = [123,5345,6578,460]
+    - list is mutable
+
+10. touple 
+    - If we want to represent a group of object as a single entity where
+        insertion order is preserved
+        duplicates are allowed
+        None is allowed
+        hetrogeneous objects are allowed
+        growable in nature
+        but immutablility should be there
+        we should use touple data type
+     - Only difference between list and toupple are list is mutable and touple is immutable
+     - Ex:
+        t = (123,32,34,54565,23)
+     - Once values are set, they are fixed values and cannot be modified
+     - This can be considered as a read only version of list    
+
+11. set
+    - If we want to represent a group of object as a single entity where
+        insertion order is not preserved
+        duplicates are not allowed
+        None is allowed
+        hetrogeneous objects are allowed
+        mutable
+        we should use set data type
+    - set is mutable
+    - order is not applicable
+    - Ex:
+        s = {1,2,3,4,5}
+
+        # Blank set initialization
+        s = set() # if delcared as s = {} it is not set but dict
+    - index,slicing concept are not applicable as order is not maintained by default
+
+12. forzenset
+     - If we want to represent a group of object as a single entity where
+        insertion order is not preserved
+        duplicates are not allowed
+        None is allowed
+        hetrogeneous objects are allowed
+        but needs immutability
+        we should use frozenset data type   
+     - Difference between set and frozenset is set is mutable and forzenset is immutable
+
+13 . dict 
+    - If we want to represent a group of object as key->value pairs, we can use dict
+    - Ex:
+        d = {100:'Priyanjana'}
+        d[100] = 'Rodrigo'
+    - dict is mutable
+    - Duplicate keys are allowed but values can be duplicated
+    - Whenever we add a new entry where key is duplicated, key will remain the same and the old 
+      value will be replaced with new value
+
+
+> None data type
+---------------------------------------------------------------------------------------------  
+* None means nothing or no value associated (something like null in Java)
+
+* Ex:
+    # def is used to define a function in Python
+    # f1() does not return any value
+    def f1():
+        a = 10
+
+    def f2():
+        print('Hello ! don\'t be like None')
+
+    f2()  # Hello ! don't be like None
+    print(f1())  # None (returns None automatically as f1 does not return anything). We can use None to handle such type of scenarios
+
+> pass keyword
+---------------------------------------------------------------------------------------------  
+    "pass" keyword can be used just pass without doing anything
+        def f3():
+            pass # passing without doing anything
+
+        f3()
+
+> Escape characters
+---------------------------------------------------------------------------------------------  
+
+    \n - line break
+    \t - horizontal tab
+    \' - single quote representation within a srt enclosed with single quotes
+    \" - double quote representation within a srt enclosed with double quotes
+    \\ - representing a backslash
+    \v - verticcal tab
+    \r - carriage return (cursor will go to fitst position of the line)
+    \b - backspace
+    \f - formfeed (go to next page (just like page own))
+
+    (Search google for more)
+
+
+> Constants 
+--------------------------------------------------------------------------------------------- 
+
+ * Fixed values which are not changed
+
+ * There is no way to specify constants in Python
+
+ * As a practise we declare variables with upper case to indicate it is a constant. It can be changed but not recommended.
+   Developer's responsibility is to adhere to this practise.
+
+ * Ex : 
+    PI = 3.14
+ 
+

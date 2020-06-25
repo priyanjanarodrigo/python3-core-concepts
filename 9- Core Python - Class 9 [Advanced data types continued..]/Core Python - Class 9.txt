@@ -1,0 +1,292 @@
+* bytes
+--------------------------------------------------
+ - immutable (does not support item assignment)
+ - Acceptable range is 0 to 256 only
+
+    x = [1,2,3,4,5,37]
+    b = bytes(x)
+
+* byteArray
+--------------------------------------------------
+ - Same as bytes data type but the only difference is byteArray is immutable
+ - Mutable
+    a = [123,23,43,23,44,22]
+    btArr = byteArray(a)  
+
+ - bytes and byteArray is generally used if we want to handle binary data (like images,video files, audio files)
+
+ - other programmng languages have byte data type and for Python wer have byes and byteArray
+
+* list
+--------------------------------------------------
+ - list is used if we want to represent a group of objects where
+    insetion order is preserved,
+    duplicates are allowed
+    (Hetrogeneous objects are allowed)
+    (None is allowed)
+ - list is growable in nature (we can increase or decrease the size based on our requirement)
+ - mutable
+ - If we use square brackets, it is considered as a list
+    ex : 
+        myList = [10, 20, 30]
+ - Can access elements with wither positive index or negative index
+    ex : 
+        myList[2]
+        myList[-1]
+
+=============================================================================================	
+ > list ontinued ...
+=============================================================================================
+
+* Usage if star (*) as the repetition operator with list
+    l1 = [10, None, True, 'Priyanjana']
+    l2 = l1*2
+
+    print(l1) # [10, None, True, 'Priyanjana']
+    print(l2) # [10, None, True, 'Priyanjana', 10, None, True, 'Priyanjana']
+    print(type(l2)) # <class 'list'>
+
+ - If we use * operator for repeating a list, compulsory one argument must be list and the other argument must be a number
+ - There is no limit for a list with respect to number of elements
+ - Storing huge number of objects, it is not recommended to use list (ex  100000000k of elements)
+
+=============================================================================================	
+ > touple data type
+=============================================================================================
+
+* If we want to represent a group of objects where insertion order is preserved,duplicates are allowed ,hetrogeneous objects are allowed
+  but if IMMUTABILITY  should be there, the we should go for touple
+
+* touple and list are the same but the only important differences are touple is IMMUTABLE where list is mutable, and touple is 
+  declared with paranthesies () and list is declared with square brackets []
+
+* Once a touple is created, we can't modify the content. Because touple is immutable and content is fixed once assigned.
+  Does not supprt item assignment
+
+* Representing a touple 
+    t = (12, 43, None, 56, False)  # This is a touple
+    l = [2, 3, 5, 7, 8]  # This is a list
+
+    print(t) # (12, 43, None, 56, False)
+
+    print(t[0]) # 12
+    print(t[-3]) # None
+    print(t[0: 3]) # (12, 43, None)
+
+    #Below line will not work as touple is immutable
+    # t[0]=100 # TypeError: 'tuple' object does not support item assignment
+
+ - Creating a new touple (complete different object) with using repetition operator also 
+   (This is not content modification but creating a new one)
+
+    t1 = t * 2
+    print(t1) # (12, 43, None, 56, False, 12, 43, None, 56, False)
+
+* Consider following scenario. IT is a touple which consists of three objects. First two are int values and the other
+   one is a list inside the touple
+
+    t3 = (10, 20, [2,6])
+    print(t3) # (10, 20, [2, 6])
+
+=============================================================================================	
+ > range data type
+=============================================================================================
+
+* If we want to represent a sequence of values/numbers, then we should go for range data type
+
+* Only int values are applicable
+
+* range is immutable. Elements/values present inside range are always immutable (inside range() function)
+
+* Form 1 - range(end) function: 
+--------------------------------
+
+- Will represent sequence of numbers from 0 to end-1
+
+    # Represents values from 0 to 9 (0 to end-1) but not 10
+    r = range(10)
+    print(type(r)) # <class 'range'>
+    print(r) # range(0, 10)
+
+    # Printing all values
+    for i in r
+        print(i)
+
+    # Accessing with index
+    print(r[4]) # 4
+    print(r[-3]) # 7
+
+    # slice operator
+    print(r[0:3]) # range(0, 3)
+
+    # Printing with the help of slice operator
+    # output :
+    # 0
+    # 1
+    for i in r[0:2]:
+        print(i)
+
+    #Immutability is not applicable for range as it is not supporting item assignment
+    r[2] = 700 # TypeError: 'range' object does not support item assignment
+
+
+* Form 2 - range(start, end) function: 
+--------------------------------------
+
+ - Represents a sequence of numbers from start to end-1
+
+ - Example : Representing a range from 10 to 30, range is defined as follows
+    r2 = range(10, 31)
+    print(r2) # range(10, 31)
+
+    # Following will print numbers from 10 to 30
+    for i in r2:
+        print(i)
+
+
+* Form 2 - range(start, end, step) function: 
+--------------------------------------------
+
+ - Technically increment is considered as "step". will step (kind of skipping) to the next value after based on step value provided
+
+ - Example : r3 will contain values starting from 10 to 30  with each next value after 5 steps 
+    (ex, 10 is printed and then next value is printed after stepping 5 values. This continues till end-1)
+    
+    r3 = range(10,31,5)
+
+    # output of following for loop  
+    # 10
+    # 15
+    # 20
+    # 25
+    # 30
+    for i in r3:
+        print(i)
+ 
+* float objects cannot be passed to range functions. Itis not applicable. Therefore, range is not applicable for float
+    
+    r4 = range(1.2,2.9)  # TypeError: 'float' object cannot be interpreted as an integer
+
+
+
+* Up to now recap 
+------------------------------------------------------------------------------------------------------------------------------------------------
+ FUNDAMENTAL DATA TYPES
+    int
+    float
+    complex
+    bool
+    str     
+
+ADVANCED DATA TYPES
+    bytes      - bytes([1,2,3,4,5])
+    byteArray  - byteArray([2,3,4,4,5])
+    list       - [123,897456,45,4565,45,43]
+    touple     - (231,268,323,43,[23,54,578,45],55)
+    range      - range(end), range(start,end), range(start,end,step)
+
+
+=============================================================================================	
+ > set data type
+=============================================================================================
+
+* If we want to represent a group of objects as a single entity where
+    duplicates are NOT allowed
+    insertion order is NOT preserved
+    hetrogeneous objects are allowed
+    we should go for set data type
+
+* set is declared with curly braces {}
+
+* indexing and slicing are not applicable for set data type. Because set internally does not preserve the order of values
+
+* set is mutable as we can change the content (example  - mySet.add('New Value')). Which meanse based on our requiredment we can 
+  increase or decrease the size
+
+* Even if we try to add duplicates values, no errors will be occured and the duplicated values will not be added
+
+* Example:
+    s = {10, 20, 30, 10, 20, 30, None, 'Hello', None}
+    # Duplicates will be ignored and only unique values will be added
+    print(s) # {10, None, 20, 'Hello', 30}
+
+    # indexing and slicing is not applicable
+    # Cannot access via elements or perform slice as there is no gurantee about the index position of elements
+    print(s[0]) # TypeError: 'set' object is not subscriptable
+    print(s[1:]) # TypeError: 'set' object is not subscriptable
+
+    # Set is mutable so we can change the content
+    s.add('New Value')
+    s.remove(None)
+    print(s) # {10, 20, 'New Value', 'Hello', 30}
+
+
+* bytes and byteArray
+    bytes is immutable and byteArray is mutable
+
+* list and touple
+    list is mutable and touple is immutable
+
+* set and frozenset
+    set is mutable and frozenset is immutable
+
+=============================================================================================	
+ > frozenset data type
+=============================================================================================
+
+* If we want to represent a group of objects as a single entity where
+    duplicates are NOT allowed
+    insertion order is NOT preserved
+    hetrogeneous objects are allowed
+    but do not need to change the content/ immutable nature is required
+    we should go for frozenset data type
+
+* set and frozenset are the same but the only difference is that set is mutable and frozenset is immutable
+
+    s = (10,20,30,40) # Initializing a set
+    fs = frozenset(s) # Assigning available values to a frozenset
+    print(fs)  # frozenset({40, 10, 20, 30})
+
+    # Following operation is not applicable as frozenset is immutable
+    fs.add(50)  # AttributeError: 'frozenset' object has no attribute 'add'
+
+=============================================================================================	
+ > dict data type (Dictionary)
+=============================================================================================
+
+* If we want to represent a group of objects as key->value pairs, then we should go for dict
+
+* Duplicate keys are NOT ALLOWED but values can be duplicated
+
+* dict type  is by default mutable (can change the content after initialization)
+
+* Both hetrogeneous keys abd valus are ALLOWED. Key and value can be any type of objects
+
+* If we are trying to add en entry for an existing key-> value pair (where key is duplicated), Key will remain the same and associated existing value 
+  will be replaced with the new value 
+
+* Example
+    # Setting key->value pairs
+    dc = {100: 'Priyanjana', 200: 'Rodrigo', 'Other': 'Michal', None: 'No value'}
+    type(dc)
+    # {100: 'Priyanjana', 200: 'Rodrigo', 'Other' : 'Michal', None : 'No value'}
+    print(dc)
+
+    # Initializing an empty dictionary. This declaration is by default treated as a dict type BUT NOT set
+    dc2 = {}  
+    print(type(dc2)) # <class 'dict'>
+
+    # Approach - dc2[KEY] = VALUE
+    dc2[100] = 'Bean'
+    dc2['isAvailable'] = False
+    dc2[True] = 123
+
+    print(dc2)  # {100: 'Bean', 'isAvailable': False, True: 123}
+
+    # Old value will be replaced with new value and key will remain the same
+    dc2[100] =  'Michal'
+    print(dc2) # {100: 'Michal', 'isAvailable': False, True: 123}
+
+    # Initializing an empty set
+    mySet = set()
+    print(type(mySet)) # <class 'set'>

@@ -1,0 +1,179 @@
+=============================================================================================
+1. What is Python ? 
+=============================================================================================
+
+ 1. Python is a general purpose high level programming language. Using Python, we can develop
+	- Web, desktop applications
+	- Machine learning
+	- Scientific applicaitons
+	- AI and robotics applications
+	- IOT applications and more
+
+ 2. Python was developed by Guido Van Rossam (Farther of Python) in 1989 while working at
+    National Research Institute (NRI) in Netherland.
+	
+	But Python was officialy made available to the public on 20th of February 1991 (Official DOB)
+	
+ 3. Python is highly recommended as the first programming language to learn for a beginner
+ 
+ 4. The biggest advantage of Python is that we can write programs very easily with concise code
+ 
+ 5. Comparing Python with Java: 
+ 
+	5.1 Example 1 : 
+	-------------------------------------------------------------------------------------------------------------
+		
+		* JAVA :
+		..................................................
+		public class HelloWorld {
+			public static void main(String[] args){
+				System.out.println("Hello World");
+			}
+		}
+		..................................................
+		
+		
+		- Should save the file with the name HelloWorld, and then,
+			> javac HelloWorld.java
+			> java HelloWorld
+		
+		In Java, just to print Hello World, we need to write a class, write main method, write print statement and after that
+		it should be compiled and then it should be executed
+		
+		
+		* PYTHON :
+		..................................................
+		print('Hello World')
+		..................................................
+		
+		
+		Just one line is enough (Python IDLE is more suitable for a hello world)
+ 
+ 	5.2 Example 2 : 
+	-------------------------------------------------------------------------------------------------------------
+	
+		- A program for calculating the total of two numbers
+ 
+		* JAVA :
+		..................................................
+		public class Demo {
+			public static void main(String[] args){
+				int a = 20;
+				int b = 10;
+				System.out.println(a+b);
+			}
+		}
+		..................................................
+		
+		
+		* PYTHON : 
+		..................................................
+		a,b=20,10
+		print(a+b)
+		..................................................
+ 
+ 6. Programming languages like C, Java are statically typed languages . At the beginning it 
+	   is required to assign types for every variable. This is not applicable in Python.
+	 
+	 - Based on the value provided, automatically type will be assigned internally 
+	 
+		..................................................
+		 a,b=10,20
+		 print(type(a))
+		..................................................
+		
+		 output is : <class 'int'>
+	
+	- Semicolon is not required at the end of statements in Python
+	
+	- Changing type of a variable based on the assigned value is also possible. (T is capital in True) 
+		
+		..................................................
+		a,b=10,20
+		print(type(a))
+		
+		a=True
+		print(type(a)
+		..................................................
+		
+		output : 
+			<class 'int'>
+			<class 'bool'>
+	
+	- Python is a dynamically typed programming language
+
+ 7. Why python was named as Python :
+ 
+		Python :			
+			learning python is full of fun. Therefore it was named based on BBC TV fun program 
+			"Monty Python's Circus" from 1969 to 1974
+			
+		Other : 
+			Hadoop - Yellow cap elephant (Creator's child's toy)
+
+ 8. While developing Python, Guido borrowed,
+ 
+		1. Functional programming features from C language
+		2. OOP features from C++
+		3. Script language features from Perl and Shell script
+		4. Modular programming features from Modula-3
+
+		Therefore, Python consists of all these features
+		
+			- Defining a simple function and executing without a class
+				def f1():print("Hello World")
+				f1()
+		
+		5. Most of the syntaxes were borrowed from C and ABC language
+
+=============================================================================================
+2. Where to use Python ? 
+=============================================================================================
+	
+	1. Desktop applications
+	2. Web applications (We have DJango framework to develop web applications with Python)
+	3. Database applicaitons
+	4. Networking applicaitons
+	5. Games
+	6. Data analysis
+	7. ML - Machine Language applicaitons
+	8. AI applicaitons
+	9. IOT applications
+	
+	Not that much recommended for mobile based applicaitons (Maybe not by the time being)
+	
+=============================================================================================
+3. Companies which use Python 
+=============================================================================================
+
+	Google (Google search)
+	Youtube
+	Dropbox
+	NASA
+	and many more ... (Search google for more)
+
+
+		
+	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

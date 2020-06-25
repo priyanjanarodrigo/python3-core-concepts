@@ -1,0 +1,239 @@
+=============================================================================================	
+* str type and operations -> continuted ......
+=============================================================================================
+
+Slice operator :
+---------------------------------------------------------------------------------------------
+
+- Simply a slice is a small part, piece (You may call it a substring)
+
+- Slicing is also applicable for collection related data types also (Same concept)
+
+- In Python there are teo types of indexes. 
+    1. Possitive index [Left to Right -->]
+    2. Negative index  [Right to Left <--]
+
+- In Python, possitive index starts with 0 (Left to Right) and negative index starts with -1 (Right to Left)
+
+   <---------------- [Negative index]
+
+      -6  -5 -4  -3  -2  -1
+    -------------------------
+    | M | Y | T | E | X | T |
+    -------------------------
+      0   1   2   3   4   5
+        
+   -----------------> [Positive index]
+
+    # Accessing index values
+    s = 'MYTEXT'
+    
+    # Possitive indexs
+    print(s[0]) # output: M
+    print(s[3]) # output: E
+    print(s[5]) # output: T
+    # print(s[6])  # output: IndexError: string index out of range
+
+    # Negative indexs (starts with -1)
+    print(s[-2])  # output: X
+    print(s[-1])  # output: T
+    # print(s[-7])  # output: IndexError: string index out of range
+
+- Slice operator syntax 
+-----------------------------------
+
+    - stringValue [begin : end]
+
+    - IMPORTANT
+    ------------- 
+        * Slice operator returns substring from begin index to end-1 index
+
+        * It is IMPORTANT to understand that begin index should be lower than end index. This is important when using slice operator with negative
+          indexes (begin<end)
+
+        * The default value for the end index is end of the string (If we are not specifying explicitly). Therefore, end index can be optional
+          if we are not explicitly providing end index but the begin index
+            - stringValue[begin:]
+
+                 testString = 'Hello World'
+
+                 print(testString[2:]) # output:  llo World  
+
+        * Also the default value for the begin index is the start of the str. (Positive index : which is 0).Therefore, begin index can also be optional
+          if we are not explicitly providing begin index but end index (Considered from 0th index to end-1 index)
+            - stringValue[:end]
+            
+                print(testString[:4])  # output: Hell
+        
+        * If we are not providing either begin index nor end index but just the colon. We will get the full string 
+          - stringValue[:]
+
+                print(testString[:])  # output: Hello World
+        
+        * Dealing with negative indexes. (Note that begin index should be lower than end index always)
+        
+            print(testString[-1:-4]) # Here nothing will be printed because begin index is not lower than end index (-1 is higher than -4)
+
+            print(testString[-4:-1]) # This works as begin index is lower than end index (-4 is lower than -1). output: orl
+
+        * Slice opertor does not throw any index kind of errors. If we are directly going to access index which is out of the range, then only
+          we will get errors
+
+        * # If we are providing a value which is out of the range to the slice operator, by default end index will be considered as the end of str
+
+    - Example:
+
+        Consider this str value : 'Sample string'
+
+         -13 -12 -11 -10 -9  -8  -7  -6  -5  -4  -3  -2  -1
+        _____________________________________________________
+        | S | a | m | p | l | e |   | s | t | r | i | n | g |
+        |___|___|___|___|___|___|___|___|___|___|___|___|___|
+          0   1   2   3   4   5   6   7   8   9  10  11  12
+ 
+        sVal='Sample string'
+
+        #Positive indexes 
+
+          print(sVal[1:10]) # output: ample str
+          
+          print(sVal[3:]) # output: ple string 
+
+          print(sVal[:5]) # output: Sampl
+
+          print(sVal[:]) # output: Sample string
+
+         # output: ample string (Does not throw an exception). 
+         # If we are providing a value which is out of the range to the slice operator, by default end index will be considered as the end of str
+          print(sVal[1:223])  
+
+          print(sVal[100]) # output : IndexError: string index out of range (Because we are directly trying to access an index which is out of range)
+
+        # Negative indexes
+
+          print(sVal[-3:-11]) # output:  (Nothing is displayed as -3 is not lower than -11)
+
+          print(sVal[-11:-3]) # output: mple str
+
+          print(sVal[-11:]) # output:  mple string
+
+          print(sVal[:-3]) # output: Sample str  
+
+- Slice operator - step
+-----------------------------------
+
+  strValue[begin:end:step]
+    
+  step means how many jumps we need. Default value for step is 1 (if we are not providing explicitly)
+
+  myStr='durgasoftwaresolutions'
+
+  print(myStr[1:10]) # we will get 1 to 9 characters
+
+  print(myStr[1:10:2]) # output: ugsfw (prints charactes from 1 to 9, stepping two indexes forward)
+
+- String repetition operator
+-----------------------------------
+
+  Printing multiple str values easily using string repetition operator. We do not to user loops just like in java,C++
+
+  repStr='How are you ?'
+
+  print(repStr*5) # output: How are you ? How are you ? How are you ? How are you ? How are you ?
+
+- len() function
+-----------------------------------
+
+  This will return the length of a string
+
+  strValue='this is a simple string'
+
+  print(len(strValue)) # outout : 23
+
+
+- IMPORTANT :
+-----------------------------------
+  * ALL THE DATA TYPES DISCUSSED ARE IMMUTABLE
+
+
+- In Python int, float, complex and str are considered as fundamental data types of Python
+
+- char data type is not available in Python and even char values are represented with str type only
+  example:
+    myChar='a'
+    print(type(myChar)) # output : <class:str>
+
+- long type is not available in Python3 (Only available in Python2). In Python3 even long values are represented by using
+  int type only
+
+
+Type casting (Type Coersion)
+-----------------------------------
+- Type casting is there between these data types (Converting from one type to another type)
+
+- Various inbuit functions for type coersion
+
+  int()
+  float()
+  complex()
+  bool()
+  str()
+
+1. int() function
+-----------------------------------
+
+  - Used to convert any other type value to int type
+
+  - Examples:
+
+      float to int
+        int(123.456) # output : 123 (float to int)
+
+      complex to int'
+        # print(int(10+20j)) # output: TypeError: can't convert complex to int (complex is incompatible with int)
+
+      bool to int
+        print(int(True)) # output: 1
+        print(int(False)) # output: 0
+
+      str to int
+        - If we want to convert str to int, compulsory that str should represent only an int value. That int value must be in Base 10 only
+
+        print(int('10')) # output : 10
+        
+        print(int('1111')) # output : 1111 (Considered as a base 10 value)        
+        
+        # print('str to int : ',int('0B1111')) # output : ValueError: invalid literal for int() with base 10: '0B1111'(Value must be a Base 10 value)
+
+        # print('str to int : ',int('23.45')) # output : ValueError: invalid literal for int() with base 10: '23.45'
+
+
+2. float() function
+-----------------------------------
+
+  - Used to convert any other type value to float type
+
+  - Examples :
+
+      int to float
+        print(float(10)) # output: 10.0
+      
+      complex to float
+        - It is not possible to complex type to float
+        # print('complex to float : ',float(10+20j))  # output: TypeError: can't convert complex to float
+      
+      bool to float
+        print(float(True))  # output: 1.0
+        print(float(False))  # output: 0.0
+
+      str to float
+        print(float('10'))  # output: 10.0
+        print(float('10.5'))  # output: 10.5
+        # print(float('ten'))  # output: ValueError: could not convert string to float: 'ten'
+        # print(float('0B111'))  # output: ValueError: could not convert string to float: '0B111' (Only decimal values are acceptable)
+
+      * We can convert any type to float except complex type
+      
+      * Whenever we convert str to float, str type should contain either an integral value or a floating point value. str value sholuld be specified
+        only in base 10
+

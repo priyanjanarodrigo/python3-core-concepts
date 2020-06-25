@@ -1,0 +1,296 @@
+3. complex() function
+-----------------------------------
+    
+    - This is used to convert other types to complex type
+
+    - Form 1: complex(x)        ==> x+0j - Here x is considered as real part if we are passing only one argument
+    - Form 2: complex(x+y)      ==> x+yj - If we are passing two arguments, x (first arg) becomes real part and 
+                                           y (second arg) becomes imaginary part
+    
+    - complex(x) and complex(x,y) are overloaded functions
+
+    - Form 1 - complex(x) ==> x+0j
+    ----------------------------------
+
+        int to complex : 
+            print(complex(10)) # outoput: (10+0j)
+
+            print(complex(0B1111)) # output: (15+0j)
+            print(complex(0O234)) # output: (156+0j)
+            print(complex(0Xbeef)) # output: (48879+0j)
+
+        float to complex
+            print(complex(10.12)) # output: (10.12+0j) (real part can be either integral or floating point)
+
+        bool to complex :
+            print(complex(True))  # output: (1+0j)
+            print(complex(False))  # output: 0j (real part is 0 because False is internally considered as 0)
+        
+        str to complex :
+            print(complex('10')) # output (10+0j)
+            print(complex('10.12')) # output (10.12+0j)
+
+            # print(complex('ten')) # output: ValueError: complex() arg is a malformed string
+            # print(complex('0B1111')) # output: ValueError: complex() arg is a malformed string
+
+
+    - Form 2 - complex(x,y) ==> x+yj
+    ----------------------------------
+        int to complex : 
+            print(complex(10,20)) # output : 10+20j
+
+        float to complex
+            print(complex(10,20.5)) # output: (10+20.5j)
+
+        bool to complex :
+            print(complex(True, False))  # output : (1+0j)
+
+        str to complex :
+            # print(complex('10', '20'))  # output: TypeError: complex() can't take second arg if first is a string
+
+
+4. bool() function
+-----------------------------------
+
+    - Used to convert other types to bool type
+
+        int to bool
+            print(bool(0)) # output: False
+            print(bool(1)) # output: True
+            print(bool(10)) # output: True (For int arguments 0 means False and non 0 is True. If 0, it is False else it is True no matter the number is possitive or negative)
+            print(bool(-123)) # output: True
+            print(bool(222)) # output: True
+
+        float to bool
+            - if the total number value is 0, then it is treated as False, else it is trated as True
+
+            print(bool(0.0)) # output: False
+            print(bool(0.1)) # output: True
+            print(bool(0.01)) # output: True
+        
+        complex to bool
+            - If both real and imaginary parts are 0 , then it returns False, else it is True
+
+            print(bool(10+20j)) # True
+            print(bool(0+2j)) # True
+            print(bool(0+0j)) # Flase
+
+        str to bool
+            If the argument is an empty string ('' or "" or '''''' or """""") it is treated as False, else it is True
+
+            print(bool('')) # output : False
+            print(bool('''''')) # output : False
+            print(bool("")) # output : False
+            print(bool("""""")) # output : False
+
+            print(bool('hello')) #output:  True
+            print(bool(None))  # output:  False
+            print(bool(' '))  # output:  True (Space is also treated as a character)
+
+5. str() function
+-----------------------------------
+
+    - Used to convert other types to str type (No restrictions at all)
+
+    int to str
+        print(str(10)) # output: 10
+        print(str(0B10)) # output: 2
+
+    float to str
+        print(str(10.5)) # output: 10.5
+
+    bool to str
+        print(str(True)) # output: True
+        print(str(False)) # output: Flase
+    
+    complex to str
+        print(str(10+12.45j)) # output: (10+12.45j)
+    
+
+
+=============================================================================================	
+Immutable vs fundamental data types
+=============================================================================================
+
+- All fundamental data types are immutable (int,float,bool,complex,str)
+
+- Once we create an obeject, we cannot perform any changes in that object. If we are trying to change, then with those changes 
+  a new object will be created by default. This non changable nature is nothing but immutability
+
+- mutable means changable 
+- immutable means non-changable
+
+- Example
+
+    x = 10                   ________   
+                             |      |   
+    x ---------------------> |  10  |
+                             |      |  
+                             --------
+
+    _________________________________________________________________________
+
+    x = 11                   ________   
+                             |      |   
+    x -----                  |  10  |  (This will be eligible for GC)
+          |                  |      |  
+          |                  --------
+          |  
+          |                  ________   
+          |                  |      |   
+          |----------------> |  11  |
+                             |      |  
+                             --------
+
+- Garbage collector will destroy unused objects/ objects without ny reference. 
+
+- Example 2: 
+
+    x=10
+    y=10
+
+    # Only one object reference is there for both x and y
+    print(id(x)) # output : 1884809280
+    print(id(y)) # output : 1884809280
+
+    In Python, if a new object is required to be created, content of the obeject will be considered first. Existing contents of available objects will be reused.
+    so the performance will be improved
+
+    x = 10
+    y = 10                   
+                             ________   
+            x -------------> |      |   
+                             |  10  |  
+            y -------------> |      |  
+                             --------
+
+
+- Water regstration system
+
+    w1 = "Hydrabad"
+    w2 = "Hydrabad"
+    w3 = "Hydrabad"
+    .
+    .
+    .
+
+    w10000000 = "Hydrabad"
+
+    _________________________________________________________________________
+                            ____________                
+    w1  ----------------->  |          |
+    w2  ----------------->  |          |
+    w3  ----------------->  |          |
+    .                       | Hydrabad |    
+    .                       |          |
+    w10000000 ----------->  |          |
+                            ------------
+
+
+- Example 3:
+
+    w1 = "Hydrabad"
+    w2 = "Hydrabad"
+    w3 = "Hydrabad"
+    w10000000 = "Hydrabad"
+
+    print(id(w1)) # output: 20139288
+    print(id(w2)) # output: 20139288
+    print(id(w3)) # output: 20139288
+    print(id(w10000000)) # output: 20139288
+
+    * Adress of the internal object is the same for every variable. Therefore only one 'Hydrabad' has been create and reused. 
+      All variables are poiting to that object reference as the content is the same 
+
+ -  Consider the following code
+
+    a=10
+    b=10
+    c=10
+
+    # Memory addess is the same as all are poiting to ther same object reference
+    print(id(a)) # output: 1884809280
+    print(id(b)) # output: 1884809280
+    print(id(c)) # output: 1884809280
+
+    # Now when a new value is assigned to a, a new object reference will be created and will not effect others (b,c).
+    # a will point to the new object referece. Therefore ids of b and c are the same but a's id is different
+    # This is possible because of immutability concept 
+   
+    a = 20
+    
+    print(id(a))  # output: 1884809440 // This id is different as it is pointing to another object reference
+
+    print(id(b)) # output: 1884809280
+    print(id(c)) # output: 1884809280
+
+    _________________________________________________________________________
+
+
+- In Python, same obeject  can be used for multiple references with same content. If one variable/reference
+  is trying to change the content, others will not be affected (existing content will remain the same) but a new object 
+  reference will be created with the new changes  
+
+- Therefore, immutability improves memory utilization and performance without any side effect
+
+
+- IMPORTANT
+----------------------------------------------------------------------------------------
+
+ * Everything in Python is an object
+
+ * All fundamental data types (int, float, bool, complexa dn str) are immutable
+
+
+- is operator
+----------------------------------------------------------------------------------------
+
+- Consider following program
+
+- is operator will return True if the variables are pointing to the same object reference,else returns False
+
+- Therefore, is operator is always going for reference comparison
+
+- Example 1:
+
+    xValue=10
+    yValue=10
+    zValue=20
+
+    print(xValue is yValue) # output: True
+    print(xValue is zValue) # output: False
+
+- Reusing the same object is applicable for the range of 0 to 256 with respect to int
+
+    v1=256
+    v2=256
+
+    print(v1 is v2) # output : True  (On Python IDEL)
+
+    v3=257
+    v4=257
+
+    # The reason for this is because, reusing same object, such type of flexibility is available from 0 to 256 only 
+    print(v3 is v4) # output : False  (On Python IDEL)
+    print(id(v3))
+    print(id(v4))
+
+- For floating point data type, reusing concept is not there
+
+    val1=12.1
+    val2=12.1
+
+    print(val1 is val2) # output: False  (On Python IDEL)
+
+- complex type related Example
+
+    For complex numbers reusability concept is not there, a new object will be created always
+
+    t = 10 + 20j
+    u = 10 + 20j
+
+    print(t is u) # output: False (On Python IDEL)
+
+
+
+

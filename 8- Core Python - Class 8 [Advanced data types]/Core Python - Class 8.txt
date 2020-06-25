@@ -1,0 +1,225 @@
+
+Summary from previous classes
+--------------------------------------------------------------------------------------------------------
+
+- Explici typecasting functions - fundamental data types (int,float,complex,bool and str)
+
+    int()
+    float()
+    complex(x)
+    complex(x,y)
+    bool()
+    str()
+
+ - Fundamental data types are immutable (Non changable behaviour)
+
+ - Whenener  we are changing a python object reference, with those changes a new object will be created
+
+ - Creation of an object is costly when it comes to time complexity. Therefore, When the object content is the same, 
+   existing available object references are pointed and resused (Creating a new object is not required if an existing object reference
+   is already available)
+
+        (Time consumed for related processes)
+        checking for existing object : 1ns
+        creating a new object        : 10000ns 
+
+ - Performance will be improved and memory will be utilization will also be improved
+
+ - Once we create an object, then we are not allwoed to change the content. Whenever we make a change a new object will be created 
+ 
+ - All fundamental data types in Python are immutable
+
+
+Reusability
+--------------------------------------------------------------------------------------------------------
+    a=10
+    b=10
+    c=10
+
+    print(a is b) # Ture
+    print(b is c) # Ture
+    print(a is c) # Ture
+    print(a is b is c) # Ture
+
+
+- IMPORTANT - Reusability
+--------------------------------------------------------------------------------------------------------
+    * Reusing same object, such type of concept is defined only in following ranges
+
+        1. int type     ==> 0 to 256
+        2. bool type    ==> always
+        3. str type     ==> always
+
+    * For float and complex, always a new object will be created. Reusability concept is not applicable
+      for float and complex
+
+
+    * The reason for range restriction
+        v1=10
+        v2=10
+        print(v1 is v2) # True
+
+        v3=257
+        v4=257
+        print(v3 is v4) # False
+    
+        - Internally this reusability concept is implemented as follows
+
+         > With respect to int type : 
+         ----------------------------
+            At the time of Python interpreter start, before the program executed 0 to 256 int type objects will be created but not more than that.
+            This is trhe most common range of using numbers and as those values are created initially, it is not required to crate them in runtime.
+            Therefore, runtime performance is improved
+            
+            if our value is available within the range, then those values will be pointed to initialiy created references (a buffer from 0 to 256)
+
+            Range is strictly defined from 0 to 256 otherwise Python startup will be more costly and time consuming
+        
+        > With respect to bool
+         ----------------------------
+            In case of bool, only two objects have to be created. Those are True and False.
+
+            Therefore this is not that costly at startup
+        
+        > With respect to str
+         ----------------------------
+            In the case of str, it does not create an initial buffer, but Whenever we create string objects, the object will be created and reused
+
+        > For float and complex
+         ----------------------------
+            Reusability is not applicable because there can be unlimited possibilities within the range 
+            (ex: between 0 and 1, there are infinite number of values)
+
+
+
+ADVANCED DATA TYPES [BEGINNING]
+===============================
+
+=============================================================================================	
+ > bytes data type
+=============================================================================================
+
+- bytes data type represents a group of byte numbers (Something like an array)
+
+- we use bytes() function to create a bytes value
+
+- Take a look at following example
+
+    x = [10,20,30,40] # x is not the bytes type. This is just a group of values (list type)
+    b = bytes(x) # Now this b itself is nothing but bytes data type
+
+    print(type(x)) # <class 'list'>
+    print(type(b)) # <class 'bytes'>
+
+    # Accessing values with index (positive or negative)
+    print(b[-1]) # 40
+    print(b[0]) # 10
+
+    # Slice operator
+    print(b[0:3]) # b'\n\x14\x1e' (some object reference)
+
+    # Printing values using simple for loop
+    #output is
+    # 10
+    # 20
+    # 30
+    # 40
+    # print each byte i in bytes b
+    for i in b: print(i)
+
+- IMPORTANT
+--------------
+    1. In the bytes data type, every value should be in the range of 0 to 256 only
+       Therefore, if we want to represent a group of values between 0 to 256 with immutability feature, then we should go for bytes
+
+    2. In case of any out of range value (a value not within 0 to 256) , there will be an error 
+        example: 
+            numGroup = bytes([100, 200, 256, 257]) # ValueError: bytes must be in range(0, 256)
+
+    3. bytes data type is immutable. Once created, we are not allowed to change the content
+       bytes object does not support item assignment
+        example:
+            numbers = [2, 4, 6, 8]
+            myB = bytes(numbers)
+
+            # myB[0] = 77 # TypeError: 'bytes' object does not support item assignment ('myB' does not support item assignment)
+
+
+=============================================================================================	
+ > bytearray data type
+=============================================================================================
+    
+- Both bytes and bytearray data types are the same except that bytearray is mutable. Item assignment after creation is possible with bytearray
+
+- We use bytearray() function to create a bytearray 
+
+- example:
+    byteNumbers = [23,45,56,78]
+    ba=bytearray(byteNumbers)
+
+    print(type(ba)) # <class 'bytearray'>
+    print(ba[0]) # 23
+    ba[0]=111 # item assignment is possible
+
+    #output:
+    #111
+    #45
+    #56
+    #78
+    for i in ba: print(i)
+
+    # ba[-2] = 257 # ValueError: byte must be in range(0, 256)
+
+
+Up to now summary in short
+---------------------------
+    int
+    float
+    complex
+    bool
+    str
+    bytes
+    bytesarray
+
+
+=============================================================================================	
+ > list data type
+=============================================================================================
+
+- If you want to represent a group of values as a single entity where insertion order is preserved and duplicates are allowed 
+  then we should go for list data type
+
+- list object is growalbe, we can either increase or decrease (both options are available)
+
+- For accessing values index is possble and also slice operator is possible
+
+- Example:
+
+    l = [] # representing an emply list. Compulsory we need to use square bracket convention when declaring a list
+    print(type(l)) # <class 'list'>
+
+    # Adding objects
+    l.append(10)
+    l.append(20)
+    l.append(30)
+    l.append(10) # duplications are allowed
+    l.append('Priyanjana') # Hetrogeneous objects are allowed
+    l.append(None) # None insertion is possible
+
+    print(l) # [10, 20, 30, 10, 'Priyanjana', None] (Insertion order is preserved)
+
+    # accessing with index
+    print(l[4]) # Priyanjana
+    print(l[-1]) # None
+
+    # accessing with slice operator
+    print(l[1:5]) # [20, 30, 10, 'Priyanjana'] (1st index to 5-1 index)
+
+    # remove function
+    print(l) # [10, 20, 30, 10, 'Priyanjana', None]
+    l.remove(10) # the object to be removed should be provided as the argument for remove function
+    print(l) # [20, 30, 10, 'Priyanjana', None]
+
+
+- In list, the insrtion order is important, list is mutable, duplicaitons are allowed, hetrigeneous objects are allowed, growable nature is allowed and values should 
+  be enclosed within square brackets
