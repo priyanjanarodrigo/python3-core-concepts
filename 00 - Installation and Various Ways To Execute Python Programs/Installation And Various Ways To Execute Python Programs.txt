@@ -1,0 +1,140 @@
+=============================================================================================
+ * Advantages of Python
+=============================================================================================
+
+	1. Easy to learn and code
+
+	2. Concise code
+		- 100 lines of code (Other language) ==> 10 to 15 lines in Python
+
+	3. Rich libraries (Batteries)
+
+	4. Supports any type of programming styles such as object-oriented, procedural/functional, scripting and modular
+
+	5. Freeware and opensource
+
+=============================================================================================
+1. Downloading and Installing Python
+=============================================================================================
+
+ > Downloading
+ --------------------------------
+
+	- Visit https://www.python.org , which is the official website of Python Software Foundation
+
+	- Go to downloads and simply download the recently updated version or required version for your OS
+
+	* IMPORTANT
+	--------------------------------
+		There are two parallel versions of python which are Python 2 and 3. These two are separate different versions.
+		From 2020 onwards, there is no support for python 2 version. Therefore, Python 3 is the recommended one to use.
+
+ > Installation Instructions
+ --------------------------------
+
+	- Windows   : https://docs.python.org/3/using/windows.html
+
+	- MacOS     : https://docs.python.org/3/using/mac.html
+
+
+=============================================================================================
+2. How many ways are there to execute a Python program
+=============================================================================================
+
+ 2.1 Python provides REPL tool (REPL = Read Evaluate Print Loop) : Python IDLE
+ --------------------------------------------------------------------------------
+
+	- Search and open Python IDLE and the Python Shell will be opened
+
+	- Or else, open the terminal and type python. Then the python shell will be opened through terminal.
+
+	- Python IDLE is just like JShell in java
+
+	- We can write any Python code there and execute (ex : >>>> print('Hello World')).
+
+	- Code we typed will be read, evaluated, printed and looped again.
+
+	- Output will be Hello World and then again the IDEL will be ready to insert next line of code
+
+		> Example output : (MacOS Terminal)
+		...................................................................................................
+        Python 3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
+        Type "help", "copyright", "credits" or "license" for more information.
+        >>> print('Hello World')
+        Hello World
+        >>>
+		...................................................................................................
+
+	- exit() function will stop python shell
+
+
+ 2.2 Writing programs in separate files (ex : myProgram.py)
+ --------------------------------------------------------------------------------
+
+	- if our program is a bit larger one, it is not recommended to use Python shell, and we should save the code in
+      a separate file with extension .py . Then we can execute that program.
+
+	- Sample Program 1 : (demo.py)
+
+		Read some int value from keyboard and then print a message that number of times.
+		...................................................................................................
+        # Takes the input from the user and prints it using a for loop
+        n = int(input("Enter some number : "))
+
+        # for loop to print the value n times
+        for i in range(n):
+            print(f'Hello index {i} ! getting errors is very common.Open Google to resolve')
+		...................................................................................................
+
+	- Sample program 2: (calculations.py)
+		...................................................................................................
+		# Takes two inputs from user and converts them to integers
+        x = int(input("Enter First Number : "))
+        y = int(input("Enter Second Number : "))
+
+        # Prints out addition, multiplication, division outputs
+        print(f'x + y = {x + y}')
+        print(f'x * y = {x * y}')
+        print(f'x / y = {x / y}')
+		...................................................................................................
+
+	> Using Python shell
+	--------------------------------
+
+		- On Python IDLE, File -> New File -> Write the code content -> Give a name and save with .py extension (ex : demo.py)
+
+	    - On Python IDLE, File -> Open -> Select the file -> Run
+
+	> Using command prompt
+	--------------------------------
+
+		- Go to the file location
+			> python3 demo.py / python demo.py
+			> python3 demo2.py / python demo2.py
+
+=============================================================================================
+3. Python IDEs and Text Editors
+=============================================================================================
+
+	* IDEs :
+		- PyCharm
+		- Eclipse
+		- Spyder
+
+	* Text Editors :
+		- Notepad ++
+		- EditPlus etc.
+
+	* Not recommended to use normal Notepad as indentations are that much important in python
+
+	* Learning point of view
+		- Text Editors :
+			Core Python
+			Advanced Python
+
+		- IDEs :
+			Frameworks (Django)
+
+	* Python is an interpreted language, First, Python VM will do compilation (Syntax checking) and once syntax is
+	  verified, then only it is going to start execution. Python VM is having the built-in capability of compilation.
+	  We do not need to compile explicitly like in Java.
