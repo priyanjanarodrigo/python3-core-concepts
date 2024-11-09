@@ -211,7 +211,7 @@
 
  - Used to represent some logical/ boolean values
  
- - The only allowed values are True and False. (This is the exact case and it is case sensitive)
+ - The only allowed values are True and False. (This is the exact case, and it is case-sensitive)
    for True , starting T should be uppercase and for False, starting F should be uppercase
 
  - Therefore, we cannot use true ,false, tRue, fALSe or any other case instead of True and False

@@ -17,7 +17,8 @@ We can represent a number in Python in 4 ways:
     3. Octal Values
     4. Hexadecimal Values
     
-Whenever we try to print() a number from any of the above forms, Python will print it in decimal format
+Whenever we use print() just to print a number from any of the above forms (without applying base conversions by using 
+bin(), oct(), hex()), Python will print it in decimal format
 '''
 
 # 1. Decimal Values

@@ -41,7 +41,8 @@ print(0B10)  # output: 2
 print(0O72)  # output: 58
 
 # float
-print('\nfloat variables : ')
+print('\nfloat variables -------------------------------------------------------------------------------------------\n')
+
 PI = 3.14
 print(PI)
 
@@ -53,39 +54,46 @@ print(f)  # output : 123.456
 # f = 0X123.456  # INVALID
 
 fValue = 1.2e3
-
-# output: Representing exponentials (1.2e3) : 1200.0
-print("\nRepresenting exponentials (1.2e3) :", fValue)
-
-print(12.2e100)
+print("\nExponential value (1.2e3) :", fValue)  # output: Exponential value (1.2e3) : 1200.0
+print(f'Exponential value 12.2e100 : {12.2e100}')
 
 # complex values
-print('\ncomplex values with complex data type')
+print('\ncomplex values with complex data type ---------------------------------------------------------------------\n')
+
+myComplexValue = 2 + 7j
+print(f'myComplexValue : {myComplexValue}')  # output: myComplexValue : (2+7j)
+print(f'type(myComplexValue) : {type(myComplexValue)}\n')  # output: <class 'complex'>
+
 p = 10 + 20j
-print(p)  # output: (10+20j)
+print(f'p : {p}')  # Output: p : (10+20j)
 
 q = 10.5 + 2.3j
-print(q)  # output : (10.5+2.3j)
+print(f'q : {q}')  # Output: q : (10.5+2.3j)
 
-# it is mandatory to use j character at the end. Otherwise it is invalid
-# r = 2.5+4y
+# it is mandatory to use j character at the end. Otherwise, it is invalid
+# r = 2.5+4y # Invalid
 
-# it is mandatory to adere to the format as well
+# it is mandatory to adhere to the format as well
 # f = 1.2+j20 # Invalid format (format is a+bj)
 
-print('\nReal part in any format: ')
-cv1 = 12 + 20j
+print('\nReal part can be in any base but imaginary part must be specified only in Decimal: ')
+
+cv1 = 12 + 20j  # Real part is in decimal base
 print(cv1)  # output: (12+20j)
 
+# Real part is in binary base
 cv2 = 0B1101 + 18j
 print(cv2)  # output: (13+18j)
 
+# Real part is in octal base
 cv3 = 0O765 + 18j
 print(cv3)  # output: (501+18j)
 
+# Real part is in hexadecimal base
 cv4 = 0XBeef + 11j
 print(cv4)  # output: (48879+11j)
 
+# Real part is in binary base
 cv5 = 0B10 + 1.23j
 print(cv5)  # output: (2+1.23j)
 
@@ -104,19 +112,22 @@ print(l / m)  # output : (0.6153846153846154+0.0769230769230769j)
 
 # Finding the real value of a complex number
 print('\nFinding the real and imaginary value of a complex number')
-v = 5 + 2j
 
-print(v.real)  # output: 5.0
-print(v.imag)  # output: 2.0
+v = 5 + 2j
+print(f'v : {v}')  # output: v : (5+2j)
+
+print(f'v.real : {v.real}')  # Output: v.real : 5.0
+print(f'v.imag : {v.imag}')  # Output: v.imag : 2.0
 
 # bool data type
-print('\nbool data type')
+print('\nbool data type --------------------------------------------------------------------------------------------\n')
+
 isValid = True
 isPermitted = False
 
 print(type(isValid))  # output <class 'bool'>
-print(isValid)  # output: True
-print(isPermitted)  # output: False
+print(f'isValid : {isValid}')  # Output: isValid : True
+print(f'isPermitted : {isPermitted}')  # Output: isPermitted : False
 
 # isValid = true # Invalid syntax (nameError : name true is not defined)
 # isValid = false # Invalid syntax (nameError : name true is not defined)
@@ -126,40 +137,56 @@ num1 = 10
 num2 = 20
 
 opt1 = num1 < num2
-print('opt1 : ', opt1)  # output: opt1 :  True
+print(f'{num1} < {num2} : {opt1}')  # Output: 10 < 20 :  True
 
 opt2 = num1 > num2
-print('opt2 : ', opt2)  # output: opt2 :  False
+print(f'{num1} > {num2} : {opt2}\n')  # Output: 10 > 20 :  False
 
-# Internal representation of True is 1 and False is 0
-print(True + True)  # output: 2
-print(False + False)  # output: 0
-print(True - True)  # output: 0
-print(False + False)  # output: 0
-print(False - True)  # output: -1
-print(False < 4)  # output: False
-print(True * False)  # output: 0
+# Internal representation of True is 1 and False is 0 (at memory level)
+print(f'Internal representation of True (int form of True) : {int(True)}')
+print(f'Internal representation of False (int form of False) : {int(False)}\n')
+
+print(f'True + True : {True + True}')  # Output: True + True : 2
+print(f'False + False : {False + False}')  # Output: False + False : 0
+print(f'True - True : {True - True}')  # Output: True - True : 0
+print(f'False + False : {False + False}')  # Output: False + False : 0
+print(f'False - True : {False - True}')  # Output: False - True : -1
+print(f'False < 4 : {False < 4}')  # Output: False < 4 :  True
+print(f'True * False : {True * False}')  # Output: True * False : 0
 
 # str - String data type
-print('/n str data type')
-name = 'Toby Maguire'
-print(type(name))  # output: <class 'str'>
-print(name)  # output: Toby Maguire
+print('\nstr data type --------------------------------------------------------------------------------------------\n')
+
+name: str = 'Tobey Maguire'
+
+print(f'name : {name}')  # Output: name : Toby Maguire
+print(f'type(name) : {type(name)}')  # Output: <class 'str'>
 
 print('\nMulti line str values:')
 myText = '''This is
                 a multi line
-                str'''
+                str
+            value'''
 
-print(myText)
+print(f'{myText}\n')
 # output of above is :
 # This is
 #                a multi line
 #                str
 
 feedback = '''This "Durga Class Tutorial" is 'really important' for us '''
-print(feedback)  # output: This "Durga Class Tutorial" is 'really important' for us
+print(f'feedback : {feedback}')  # Output: feedback : This "Durga Class Tutorial" is 'really important' for us
 
+print('\nslice operator')
 phrase = 'This is a small phrase'
+print(f'\nphrase : {phrase}')
+
 # Obtaining the characters from 2 to 15 index (includes 2nd index, excludes 15th index / 2 to (15-1))
-print(phrase[2:15])  # output: is is a small
+
+'''
+T  h  i  s     i  s     a     s  m  a  l  l     p  h  r  a  s  e
+0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21
+      |------------------------------------|
+'''
+
+print(f'phrase[2:15] : {phrase[2:15]}')  # Output: phrase[2:15] : is is a small
