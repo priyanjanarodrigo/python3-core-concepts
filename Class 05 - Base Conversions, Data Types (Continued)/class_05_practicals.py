@@ -1,16 +1,17 @@
-print('Python Program : 5 - Core Python - Class 5')
+print('Class 05 - Base Conversions, Data Types (Continued)\n')
 
-# Dynamically typed. Data type of a variable is considered based on the assigned value
+print('Dynamically typed Programming Language - Example ------------------------------------------------------------\n')
+# Dynamically typed. The data type of a variable is considered based on the assigned value
 x = 10
-print(type(x))  # <class 'int'>
+print(f'type(x) : {type(x)}')  # <class 'int'>
 
 x = True
-print(type(x))  # <class 'bool'>
+print(f'type(x) : {type(x)}')  # <class 'bool'>
 
-# Base convertions ----------------------------------------------------
+print('\nBase Conversions ------------------------------------------------------------------------------------------\n')
 
 # bin() function
-print('\nbin() function : ')
+print('bin() function : ')
 x = 2
 print(bin(x))  # output: 0b10
 print(bin(15))  # output: 0b1111
@@ -44,7 +45,7 @@ print('\nfloat variables : ')
 PI = 3.14
 print(PI)
 
-f = 123.456   # VALID (Only decimal base is applicable for float)
+f = 123.456  # VALID (Only decimal base is applicable for float)
 print(f)  # output : 123.456
 
 # f = 0B111.011  # INVALID
@@ -60,10 +61,10 @@ print(12.2e100)
 
 # complex values
 print('\ncomplex values with complex data type')
-p = 10+20j
+p = 10 + 20j
 print(p)  # output: (10+20j)
 
-q = 10.5+2.3j
+q = 10.5 + 2.3j
 print(q)  # output : (10.5+2.3j)
 
 # it is mandatory to use j character at the end. Otherwise it is invalid
@@ -73,19 +74,19 @@ print(q)  # output : (10.5+2.3j)
 # f = 1.2+j20 # Invalid format (format is a+bj)
 
 print('\nReal part in any format: ')
-cv1 = 12+20j
+cv1 = 12 + 20j
 print(cv1)  # output: (12+20j)
 
-cv2 = 0B1101+18j
+cv2 = 0B1101 + 18j
 print(cv2)  # output: (13+18j)
 
-cv3 = 0O765+18j
+cv3 = 0O765 + 18j
 print(cv3)  # output: (501+18j)
 
-cv4 = 0XBeef+11j
+cv4 = 0XBeef + 11j
 print(cv4)  # output: (48879+11j)
 
-cv5 = 0B10+1.23j
+cv5 = 0B10 + 1.23j
 print(cv5)  # output: (2+1.23j)
 
 # This is invalid because imaginary part (b) must be only in decimal base
@@ -93,17 +94,17 @@ print(cv5)  # output: (2+1.23j)
 # print(cv6)  # output: (2+1.23j)
 
 print('\nPerforming some mathematical operations with complex types')
-l = 10+20j
-m = 20+30j
+l = 10 + 20j
+m = 20 + 30j
 
-print(l+m)  # output : (30+50j)
-print(l*m)  # output : (-400+700j)
-print(l-m)  # output : (-10-10j)
-print(l/m)  # output : (0.6153846153846154+0.0769230769230769j)
+print(l + m)  # output : (30+50j)
+print(l * m)  # output : (-400+700j)
+print(l - m)  # output : (-10-10j)
+print(l / m)  # output : (0.6153846153846154+0.0769230769230769j)
 
 # Finding the real value of a complex number
 print('\nFinding the real and imaginary value of a complex number')
-v = 5+2j
+v = 5 + 2j
 
 print(v.real)  # output: 5.0
 print(v.imag)  # output: 2.0
@@ -131,14 +132,13 @@ opt2 = num1 > num2
 print('opt2 : ', opt2)  # output: opt2 :  False
 
 # Internal representation of True is 1 and False is 0
-print(True+True)  # output: 2
-print(False+False)  # output: 0
-print(True-True)  # output: 0
-print(False+False)  # output: 0
-print(False-True)  # output: -1
+print(True + True)  # output: 2
+print(False + False)  # output: 0
+print(True - True)  # output: 0
+print(False + False)  # output: 0
+print(False - True)  # output: -1
 print(False < 4)  # output: False
-print(True*False)  # output: 0
-
+print(True * False)  # output: 0
 
 # str - String data type
 print('/n str data type')
@@ -158,8 +158,8 @@ print(myText)
 #                str
 
 feedback = '''This "Durga Class Tutorial" is 'really important' for us '''
-print(feedback) # output: This "Durga Class Tutorial" is 'really important' for us
+print(feedback)  # output: This "Durga Class Tutorial" is 'really important' for us
 
-phrase='This is a small phrase'
+phrase = 'This is a small phrase'
 # Obtaining the characters from 2 to 15 index (includes 2nd index, excludes 15th index / 2 to (15-1))
-print(phrase[2:15]) # output: is is a small
+print(phrase[2:15])  # output: is is a small

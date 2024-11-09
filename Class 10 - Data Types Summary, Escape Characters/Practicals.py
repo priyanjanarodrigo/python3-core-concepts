@@ -1,7 +1,7 @@
 print('Python Program : 10 - Core Python - Class 10\n')
 
 # None data type
-print('Nonde data type\n')
+print('None data type\n')
 
 # def is used to define a function in Python
 # f1() does not return any value
@@ -20,5 +20,5 @@ def f3():
 
 f3()
 
-# Constatns
+# Constants
 print('\nThere is no way to define constants in Python\n')

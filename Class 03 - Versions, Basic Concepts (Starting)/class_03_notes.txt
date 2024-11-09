@@ -28,14 +28,14 @@
 =============================================================================================
 2. Python versions [Current version 3.8.1 (on 02/20/2020)]
 =============================================================================================	
-	
+
 	1. Major Python Versions
 	
 		- Python 1.0 - Introduced in January 1994 (Almost gone)
 		- Python 2.0 - Introduced in October 2000
-		- Python 3.0 - Introduced in December 2008 (The most pwerful version)
+		- Python 3.0 - Introduced in December 2008 (The most powerful version)
 	
-	2. Any new version should provide suport for old versions (Software rules).
+	2. Any new version should provide support for old versions (Software rules).
 	   In Python there is no backward compatibility. Version 3 does not support version 2.
 	   
 		Ex : 
@@ -82,16 +82,16 @@
 				num_test=20	- valid
 				_myVal=34	- valid
 				
-			4. Python identifiers are case sensitive. Python itself is a case sensitive programming language
+			4. Python identifiers are case-sensitive. Python itself is a case-sensitive programming language
 				
 				total=10
 				TOTAL=20
 				Total=12
 				toTAl=20
 				
-				All of the above decalrations are valid and unique
+				All of the above declarations are valid and unique
 			
-			5. Reserved words/ key words are not allowed to use as as identifiers
+			5. Reserved words/ keywords are not allowed to use as identifiers
 				
 				if=10	- invalid
 				def=True- invalid
@@ -104,7 +104,7 @@
 				123Total	- invalid (can use digits but cannot start with a digit)
 				total123	- valid
 				java2share	- valid
-				ca$h		- invlid ($ is not allowed)
+				ca$h		- invalid ($ is not allowed)
 				_abc_abc_	- valid
 				def			- invalid (keywords)
 				if			- invalid (keywords)
@@ -112,65 +112,6 @@
 		> IMPORTANT
 		
 			* If the identifier starts with an underscore symbol (_num1), it indicates that it is private
-			* If the identifier starts with two underscores sybmols (__num1), it indicates that it is strongly private
+			* If the identifier starts with two underscores symbols (__num1), it indicates that it is strongly private
 			* If an identifier is starting with two underscores and also ends with two underscores (__main__), 
 			  it indicates that it is a language specific identifier. It is a special variable defined by Python itself
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

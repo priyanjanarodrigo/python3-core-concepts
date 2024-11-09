@@ -2,7 +2,7 @@
 Summary from previous classes
 --------------------------------------------------------------------------------------------------------
 
-- Explici typecasting functions - fundamental data types (int,float,complex,bool and str)
+- Explicit typecasting functions - fundamental data types (int,float,complex,bool and str)
 
     int()
     float()
@@ -11,12 +11,12 @@ Summary from previous classes
     bool()
     str()
 
- - Fundamental data types are immutable (Non changable behaviour)
+ - Fundamental data types are immutable (Non changeable behaviour)
 
- - Whenener  we are changing a python object reference, with those changes a new object will be created
+ - Whenever  we change a python object reference, with those changes a new object will be created
 
  - Creation of an object is costly when it comes to time complexity. Therefore, When the object content is the same, 
-   existing available object references are pointed and resused (Creating a new object is not required if an existing object reference
+   existing available object references are pointed and reused (Creating a new object is not required if an existing object reference
    is already available)
 
         (Time consumed for related processes)
@@ -179,7 +179,7 @@ Up to now summary in short
     bool
     str
     bytes
-    bytesarray
+    bytearray
 
 
 =============================================================================================	
@@ -189,13 +189,13 @@ Up to now summary in short
 - If you want to represent a group of values as a single entity where insertion order is preserved and duplicates are allowed 
   then we should go for list data type
 
-- list object is growalbe, we can either increase or decrease (both options are available)
+- list object is growable, we can either increase or decrease (both options are available)
 
-- For accessing values index is possble and also slice operator is possible
+- For accessing values index is possible and also slice operator is possible
 
 - Example:
 
-    l = [] # representing an emply list. Compulsory we need to use square bracket convention when declaring a list
+    l = [] # representing an empty list. Compulsory we need to use square bracket convention when declaring a list
     print(type(l)) # <class 'list'>
 
     # Adding objects
@@ -221,5 +221,5 @@ Up to now summary in short
     print(l) # [20, 30, 10, 'Priyanjana', None]
 
 
-- In list, the insrtion order is important, list is mutable, duplicaitons are allowed, hetrigeneous objects are allowed, growable nature is allowed and values should 
-  be enclosed within square brackets
+- In list, the insertion order is important, list is mutable, duplication are allowed, heterogeneous objects are
+  allowed, growable nature is allowed and values should be enclosed within square brackets.

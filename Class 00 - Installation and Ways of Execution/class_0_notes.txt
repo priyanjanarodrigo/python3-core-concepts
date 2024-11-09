@@ -17,7 +17,7 @@
 1. Downloading and Installing Python
 =============================================================================================
 
- > Downloading
+ > Downloading Python
  --------------------------------
 
 	- Visit https://www.python.org , which is the official website of Python Software Foundation

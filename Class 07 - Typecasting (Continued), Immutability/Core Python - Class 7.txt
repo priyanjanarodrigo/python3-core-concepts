@@ -114,11 +114,11 @@ Immutable vs fundamental data types
 
 - All fundamental data types are immutable (int,float,bool,complex,str)
 
-- Once we create an obeject, we cannot perform any changes in that object. If we are trying to change, then with those changes 
-  a new object will be created by default. This non changable nature is nothing but immutability
+- Once we create an object, we cannot perform any changes in that object. If we are trying to change, then with those changes
+  a new object will be created by default. This non-changeable nature is nothing but immutability
 
-- mutable means changable 
-- immutable means non-changable
+- mutable means changeable
+- immutable means non-changeable
 
 - Example
 
@@ -153,7 +153,7 @@ Immutable vs fundamental data types
     print(id(x)) # output : 1884809280
     print(id(y)) # output : 1884809280
 
-    In Python, if a new object is required to be created, content of the obeject will be considered first. Existing contents of available objects will be reused.
+    In Python, if a new object is required to be created, content of the object will be considered first. Existing contents of available objects will be reused.
     so the performance will be improved
 
     x = 10
@@ -165,7 +165,7 @@ Immutable vs fundamental data types
                              --------
 
 
-- Water regstration system
+- Water registration system
 
     w1 = "Hydrabad"
     w2 = "Hydrabad"
@@ -199,8 +199,8 @@ Immutable vs fundamental data types
     print(id(w3)) # output: 20139288
     print(id(w10000000)) # output: 20139288
 
-    * Adress of the internal object is the same for every variable. Therefore only one 'Hydrabad' has been create and reused. 
-      All variables are poiting to that object reference as the content is the same 
+    * Address of the internal object is the same for every variable. Therefore, only one 'Hydrabad' has been create and reused.
+      All variables are pointing to that object reference as the content is the same
 
  -  Consider the following code
 
@@ -208,13 +208,13 @@ Immutable vs fundamental data types
     b=10
     c=10
 
-    # Memory addess is the same as all are poiting to ther same object reference
+    # Memory adders is the same as all are pointing to the same object reference
     print(id(a)) # output: 1884809280
     print(id(b)) # output: 1884809280
     print(id(c)) # output: 1884809280
 
-    # Now when a new value is assigned to a, a new object reference will be created and will not effect others (b,c).
-    # a will point to the new object referece. Therefore ids of b and c are the same but a's id is different
+    # Now when a new value is assigned to a, a new object reference will be created and will not affect others (b,c).
+    # a will point to the new object reference. Therefore, ids of b and c are the same but a's id is different
     # This is possible because of immutability concept 
    
     a = 20
@@ -239,7 +239,7 @@ Immutable vs fundamental data types
 
  * Everything in Python is an object
 
- * All fundamental data types (int, float, bool, complexa dn str) are immutable
+ * All fundamental data types (int, float, bool, complex dn str) are immutable
 
 
 - is operator
@@ -290,7 +290,3 @@ Immutable vs fundamental data types
     u = 10 + 20j
 
     print(t is u) # output: False (On Python IDEL)
-
-
-
-

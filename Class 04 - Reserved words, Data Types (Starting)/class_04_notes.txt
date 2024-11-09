@@ -1,0 +1,294 @@
+=============================================================================================	
+1. Basic concepts - Continued
+=============================================================================================	
+
+- Identifiers rules quick Summary from previous class
+    1. a to z , A to Z , 0 to 9 and _ only 
+    2. Cannot start with a digit
+    3. Case-sensitive
+    4. Reserved words cannot be used as Identifiers
+    5. No length limit but recommended to user short and meaningful ones
+    
+    _myVal      => Treated as private
+    __myValue   => Strongly private
+    __value__   => Language defined special name (Language specific conversion)
+                   We can use this conversion, but it is not recommended
+
+=============================================================================================	
+2. Reserved words 
+=============================================================================================	
+
+- The words which are reserved to represent some meaning or functionality are called reserved words
+
+- In Python there were 33 reserved words initially and Python recently expanded its set of keywords from 33 to 35.
+  In Python 3.10 and later versions, three keywords were added: match, case, and except.
+
+- Currently in Python there are 36 reserved words
+
+    01. True    - Boolean true value
+    02. False   - Boolean false value
+    03. None    - Represents a null value/ To indicate nothing (Just like null in Java)
+
+    04. and     - and operator/ Logical operator for conjunction
+    05. or      - or operator/ Logical disjunction
+    06. not     - not operator/ Logical negation
+    07. is      - is operator/ Tests object identity
+
+    08. if      - Conditional branching/ if condition indication
+    09. else    - Specifies what to do if conditionals are false/ else condition indication
+    10. elif    - Used in conditional statements as “else if”/ else if condition indication
+
+    11. while   - To declare while loop
+    12. for     - To declare for loop
+    13. break   - To break (in flow controls)/ Exits from a loop
+    14. continue- Skips the current iteration/ continue for the next iteration (applicable only for loops concept)
+    15. return  - Exits a function and returns a value
+    16. in      - Checks for membership in a sequence/ collection (like lists, tuples, dictionaries, strings range, etc.)
+    17. yield   - Pauses function execution, returning a generator/Used in generator functions to return values.
+
+    18. try     - Starts an exception-handling block/ For exception handling
+	19.	except  - Used in exception handling, already in Python but often highlighted in recent updates for its role in
+	              enhanced error handling syntax and structure. (used instead of catch)
+    20. finally - Executes code after try and except, regardless of exceptions./ Indicates what to execute once exceptions are handled
+    21. raise   - Triggers an exception/ To raise our own exceptions (just like throw in Java but not throws)
+    22. assert  - For assertions/ Used for debugging, to test conditions
+    23. import  - Imports a module
+    24. from    - Used with import to specify the module/ Declare from which a package is imported
+    25. as      - Used for aliasing, like in imports (To create alias names)
+    26. class   - Defines a new class
+    27. def     - Defines a function
+    28. pass    - Passing without doing nothing (Can be used in methods, blocks. Applicable anywhere)/ Acts as a null statement.
+    29. global  - Declares a global variable.
+    30. nonlocal- Declares a variable in the nearest enclosing scope.
+
+    31. lambda  - To create anonymous functions
+    32. del     - Deletes an object./ To delete a variable, method,class
+    33. with    - Simplifies exception handling in context management. More helpful with file handling concept
+
+    The following keywords were added In Python 3.10 and later versions:
+
+    34. match   - Used to perform structural pattern matching, introduced in Python 3.10. This keyword initiates a match
+                  block, similar to a switch statement in other languages, allowing you to check for patterns in complex
+                  data structures.
+	35.	case    - Works within a match statement to define individual patterns. Each case checks against a specific
+	              pattern within the match block.
+
+ - In Python, switch case statement is not available, but as an alternative we have match case statement.
+
+ - In Python, do while loop is not available
+
+ - In Python, do catch is not available
+
+ - pass and continue keywords are different
+
+ - IMPORTANT NOTES :
+ -------------------
+
+    1. All the reserved words contain alphabet symbols only
+
+    2. Except first three (True,False,None) all the remaining keywords contains lowercase letters
+
+    3. Look at following code
+        # a = true is not valid
+        a = True
+        print(a)
+
+        # b = true is not valid.
+        b = None
+        print(b)
+
+        # Displaying all the available keywords. Here keyword is a module in Python 
+        # First it is imported and print the value of kwlist variable
+
+        import keyword
+        print(keyword.kwlist) 
+
+        Output : 
+            ['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def',
+            'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda',
+            'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+
+=============================================================================================	
+3. Data types
+=============================================================================================	
+
+ - Data types represent the type of data present inside a variable
+    ex  : 
+    x=10 # x is int type
+
+- Python language is also considered as a dynamically typed programming language
+  Based on the provided value to a variable, automatically the type will be assigned
+
+- There are 16 built in data types available
+
+.............................................................................................................................
+
+ 1. int     - int is the only data type to represent integral values, whole numbers 
+              (ex : 10, 2300, 354435). In Python 3, even for long values int is used (Python 2 had long but not Python 3)
+
+ 2. float   - To represent floating point values (ex : 10.123)
+
+ 3. complex - This is a speciality in Python. This type of thing is not available in Java also.
+              This is useful for developing scientific calculations (ex : 10+2j)
+
+ 4. bool    - Represents Boolean values, True or False. Booleans are a subclass of int (with True as 1 and False as 0)
+
+ 5. str     - Represents Unicode strings, which are immutable
+
+ 6. bytes   - Represents immutable sequences of bytes/ A group of byte values
+
+ 7. bytearray -  A mutable sequence of bytes/ A group of byte values but there is a difference with bytes
+
+ 8. memoryview - Provides a view of another binary data type without copying/ Provides a view on an existing bytes-like
+                 object (such as bytes or bytearray) without creating a copy. It’s useful when you want to work with
+                 parts of a large binary data structure without duplicating memory
+
+ 9. range   - To represent a range of numbers
+
+ 10. list    - To represent a list of values
+
+ 11. tuple  - To represent a list of values but with some difference (mutable and unmutable values)
+
+ 12. set    - List of values without duplicates
+
+ 13. frozenset - List of values without duplicates but we cannot modify
+
+ 14. dict   - Dictionary. for key value pairs (just like Maps in Java)
+
+ 15. defaultdict - Default dictionary is a specialized subclass of the built-in dict class. It's designed to provide a
+                   default value for keys that are not present in the dictionary.
+
+ 16. None   - Nothing (Just like null)
+
+
+ - IMPORTANT : 
+ --------------
+    In Python, everything is an object including all data types even functions (internally)
+    Even if we are not typing inside a calls, it is also an object.
+
+    ex : a=10;
+                       ________
+    a --------------->(   10   )
+                      (________) 
+
+.............................................................................................................................
+
+ - Python provides some inbuilt functions (Examples)
+
+    1. print() - to print something
+        ex : print('Hello World')
+
+    2. type() - to get the type of a variable
+        a=10;
+        print(type(a)) # output is <class 'int'>
+
+    3. id() - to find the address of the object
+        c=23;
+        print(id(a)) # output is 1858601280 
+
+
+=============================================================================================	
+4. Data Types - Deep Dive
+=============================================================================================
+
+1. int
+=============================================================================================	
+
+ - The numbers without a decimal point is considered as int values. Used to hold integral values
+    ex :
+        a=20
+        print(type(a)) # <class 'int'> - This means for int class an object has been created
+ 
+ - In Python 3 , long data type is not available. Therefore, int data type is used even for long data type values
+
+ - Representing values. We can represent values in 4 ways,
+    1. Decimal from
+    2. Binary from
+    3. Octal from
+    4. Hexadecimal form
+    
+
+    1. Decimal Values [Base 10, 0 to 9 are allowed] 
+    ----------------------------------------------------
+        - By default int values are considered as Decimal values
+        - example:
+            Decimal positive values
+                a=1111
+            
+            Decimal positive values
+                a=-1111
+
+            This is not a binary value as by default it is considered as a decimal value in Python.
+            Therefore, this value is "One Thousand One Hundred And Eleven"
+        
+
+    2. Binary Values [Base 2,  0 and 1 are allowed]
+    ----------------------------------------------------
+        - The way we can specify a binary value is prefixing it with "0b" or "0B"
+        - example:
+            Binary positive values :
+                a=0b1111
+                x=0B1111
+
+            Binary positive values :
+                a=-0b1111
+                x=-0B1111
+
+        - This represents decimal value 15 with binary 1 1 1 1
+        - Therefore, values starts with "0b" or "0B" are considered as binary values
+
+            .............................................
+            # Binary Values
+            myNumber = 0b1111
+            mySecondNumber = -0B1111
+            
+            print(myNumber) # output: 15
+            print(mySecondNumber) # output: -15
+            .............................................
+
+
+    3. Octal Values [Base 8,  0 to 7 are allowed]
+    ----------------------------------------------------
+        - We can specify an octal value by prefixing it with "0o" (zero and lower case o) or "0O" (zero and upper case O)
+        - Example:
+            .............................................
+            #Octal positive values
+                ocatlVal  = 0O777
+
+            #Octal negative values
+                octalVal2 = -0o167
+
+            print(ocatlVal) # output is:511
+            print(octalVal2) # output is:-119
+            .............................................
+
+
+    4. Hexadecimal Values [Base 16,  0 to 9 and a to f/ A to F are allowed]
+    -----------------------------------------------------------------------
+        - The way we can specify a hexadecimal value is prefixing it with "0x" or "0X"
+        - example:
+            .............................................
+            #Hexadecimal positive values
+                hexVal  = 0xFace
+
+            #Hexadecimal negative values
+                hexVal2 = -0xBeef
+
+            print(hexVal) # output is:64206
+            print(hexVal2) # output is:-48879
+            .............................................
+
+
+* IMPORTANT
+------------
+ - No matter what the representation of an int value (decimal, binary, orcat or hexadecimal), Python will always
+    display those only in Decimal form
+
+    a=10     # print(a) output is 10 (in decimal format)
+    b=0B10   # print(b) output is 2 (in decimal format)
+    c=0O10   # print(c) output is 8 (in decimal format)
+    d=0X10   # print(d) output is 16 (in decimal format)
+
+ - Size, limit and range, about these kinds of things we do not need to take care because as everything is objects
+   in Python and size is not fixed and it depends

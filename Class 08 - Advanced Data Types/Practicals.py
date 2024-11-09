@@ -75,7 +75,7 @@ for i in ba:
 
 # list data type
 print('\nlist data type')
-l = []  # representing an emply list
+l = []  # representing an empty list
 print(type(l))  # <class 'list'>
 
 # Adding objects

@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 print('Python Program : 9 - Core Python - Class 9\n')
 
 # Recap from last sessions ------------------------------------------------------------------------------
@@ -9,8 +11,8 @@ print('\nDisplaying bytes b :')
 for i in b:
     print(i)
 
-# bytearray data trpe - bytearray is mutable
-mySecondTestList = [12, 43, 56, 87, 56, 34]
+# bytearray data type - bytearray is mutable
+mySecondTestList: list = [12, 43, 56, 87, 56, 34]
 btArr = bytearray(mySecondTestList)
 btArr.append(88)
 btArr.remove(12)
@@ -20,8 +22,8 @@ print('\nDisplaying btArr bytesArray :')
 for i in btArr:
     print(i)
 
-# list data type - list is mutable, insertion order is preserved, hetrogeneous objects are allowed
-myList = [23, 345, 76, 8987, 78, 4535534, 45, None, 12.2, False, 10+2j]
+# list data type - list is mutable, insertion order is preserved, heterogeneous objects are allowed
+myList: list = [23, 345, 76, 8987, 78, 4535534, 45, None, 12.2, False, 10 + 2j]
 myList.append(11)
 myList.remove(4535534)
 
@@ -33,7 +35,7 @@ print('Displaying myList list (Reverse order) :', myList)
 
 # Usage if star (*) as the repetition operator with list
 l1 = [10, None, True, 'Priyanjana']
-l2 = l1*2
+l2 = l1 * 2
 
 print('\nUsing * operator :')
 print('original list l1: ')
@@ -42,11 +44,11 @@ print('\nMultiplied l2 list : ')
 print(l2)  # [10, None, True, 'Priyanjana', 10, None, True, 'Priyanjana']
 print(type(l2))  # <class 'list'>
 
-# touple data type --------------------------------------------------------------------------------------
-# By using paranthesies we can represent a touple
+# tuple data type --------------------------------------------------------------------------------------
+# By using parenthesis we can represent a tuple
 print('\ntouple data type ----------------------------')
-t = (12, 43, None, 56, False)  # This is a touple
-l = [2, 3, 5, 7, 8]  # This is a list
+t: tuple = (12, 43, None, 56, False)  # This is a tuple
+l: list = [2, 3, 5, 7, 8]  # This is a list
 
 print(t)  # (12, 43, None, 56, False)
 # Accessing with index (positive and negative)
@@ -55,14 +57,14 @@ print(t[-3])  # None
 # Using slice operator
 print(t[0: 3])  # (12, 43, None)
 
-# Below line will not work as touple is immutable
+# Below line will not work as tuple is immutable
 # t[0]=100 # TypeError: 'tuple' object does not support item assignment
 
 t1 = t * 2
 print(t1)  # (12, 43, None, 56, False, 12, 43, None, 56, False)
 
-# Consider following scenario. IT is a touple which consists of three objects. First two are int values and the other
-# one is a list inside the touple
+# Consider following scenario. IT is a tuple which consists of three objects. First two are int values and the other
+# one is a list inside the tuple
 t3 = (10, 20, [2, 6])
 print(t3)  # (10, 20, [2, 6])
 
@@ -137,7 +139,7 @@ s = {10, 20, 30, 10, 20, 30, None, 'Hello', None}
 # Duplicates will be ignored and only unique values will be added
 print(s)  # {10, None, 20, 'Hello', 30}
 
-# Cannot access via elements or perform slice as there is no gurantee about the index position of elements
+# Cannot access via elements or perform slice as there is no guarantee about the index position of elements
 # print(s[0]) # TypeError: 'set' object is not subscriptable
 # print(s[1:]) # TypeError: 'set' object is not subscriptable
 
@@ -146,14 +148,14 @@ s.add('New Value')
 s.remove(None)
 print(s)  # {10, 20, 'New Value', 'Hello', 30}
 
-
 print('\nCoding practise examples  :')
 s2 = set({})  # Initializing a blank set
 print(type(s2))  # <class 'set'>
 
 testList = list([])  # Initializing a blank list (Just as an example)
 
-# testTouple = touple(())  # Initializing a blank touple # N/A
+# testTouple = tuple(())  # Initializing a blank tuple # N/A
+testTouple = tuple(())
 
 for i in range(5):
     s2.add(i)
@@ -194,9 +196,25 @@ dc2[True] = 123
 
 print(dc2)  # {100: 'Bean', 'isAvailable': False, True: 123}
 
-dc2[100] =  'Michal'
-print(dc2) # {100: 'Michal', 'isAvailable': False, True: 123}
+dc2[100] = 'Michal'
+print(dc2)  # {100: 'Michal', 'isAvailable': False, True: 123}
 
 # Initializing an empty set
 mySet = set()
 print(type(mySet))  # <class 'set'>
+
+# defaultdict data type ---------------------------------------------------------------------------------------------
+print('\ndefaultdict data type', end='\n')
+
+
+def count_occurrences(numbers: list):
+    counter = defaultdict(int)
+
+    for num in numbers:
+        counter[num] += 1
+
+    print(counter)
+
+
+numbersList: list = [1, 2, 3, 2, 1, 3, 2, 4, 5, 2, 1, 4]
+count_occurrences(numbersList)

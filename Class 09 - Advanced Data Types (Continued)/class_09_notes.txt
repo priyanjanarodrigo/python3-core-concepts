@@ -15,27 +15,27 @@
 
  - bytes and byteArray is generally used if we want to handle binary data (like images,video files, audio files)
 
- - other programmng languages have byte data type and for Python wer have byes and byteArray
+ - other programming languages have byte data type and for Python wer have byes and byteArray
 
 * list
 --------------------------------------------------
  - list is used if we want to represent a group of objects where
-    insetion order is preserved,
+    insertion order is preserved,
     duplicates are allowed
-    (Hetrogeneous objects are allowed)
+    (Heterogeneous objects are allowed)
     (None is allowed)
  - list is growable in nature (we can increase or decrease the size based on our requirement)
  - mutable
  - If we use square brackets, it is considered as a list
     ex : 
         myList = [10, 20, 30]
- - Can access elements with wither positive index or negative index
+ - Can access elements with either positive index or negative index
     ex : 
         myList[2]
         myList[-1]
 
 =============================================================================================	
- > list ontinued ...
+ > list continued ...
 =============================================================================================
 
 * Usage if star (*) as the repetition operator with list
@@ -51,20 +51,20 @@
  - Storing huge number of objects, it is not recommended to use list (ex  100000000k of elements)
 
 =============================================================================================	
- > touple data type
+ > tuple data type
 =============================================================================================
 
-* If we want to represent a group of objects where insertion order is preserved,duplicates are allowed ,hetrogeneous objects are allowed
-  but if IMMUTABILITY  should be there, the we should go for touple
+* If we want to represent a group of objects where insertion order is preserved,duplicates are allowed ,heterogeneous objects are allowed
+  but if IMMUTABILITY  should be there, then we should go for tuple
 
-* touple and list are the same but the only important differences are touple is IMMUTABLE where list is mutable, and touple is 
-  declared with paranthesies () and list is declared with square brackets []
+* tuple and list are the same but the only important differences are tuple is IMMUTABLE where list is mutable, and tuple is
+  declared with parenthesis () and list is declared with square brackets []
 
-* Once a touple is created, we can't modify the content. Because touple is immutable and content is fixed once assigned.
-  Does not supprt item assignment
+* Once a tuple is created, we can't modify the content. Because tuple is immutable and content is fixed once assigned.
+  Does not support item assignment
 
-* Representing a touple 
-    t = (12, 43, None, 56, False)  # This is a touple
+* Representing a tuple
+    t = (12, 43, None, 56, False)  # This is a tuple
     l = [2, 3, 5, 7, 8]  # This is a list
 
     print(t) # (12, 43, None, 56, False)
@@ -73,17 +73,17 @@
     print(t[-3]) # None
     print(t[0: 3]) # (12, 43, None)
 
-    #Below line will not work as touple is immutable
+    #Below line will not work as tuple is immutable
     # t[0]=100 # TypeError: 'tuple' object does not support item assignment
 
- - Creating a new touple (complete different object) with using repetition operator also 
+ - Creating a new tuple (complete different object) with using repetition operator also
    (This is not content modification but creating a new one)
 
     t1 = t * 2
     print(t1) # (12, 43, None, 56, False, 12, 43, None, 56, False)
 
-* Consider following scenario. IT is a touple which consists of three objects. First two are int values and the other
-   one is a list inside the touple
+* Consider following scenario. IT is a tuple which consists of three objects. First two are int values and the other
+   one is a list inside the tuple
 
     t3 = (10, 20, [2,6])
     print(t3) # (10, 20, [2, 6])
@@ -182,7 +182,7 @@ ADVANCED DATA TYPES
     bytes      - bytes([1,2,3,4,5])
     byteArray  - byteArray([2,3,4,4,5])
     list       - [123,897456,45,4565,45,43]
-    touple     - (231,268,323,43,[23,54,578,45],55)
+    tuple     - (231,268,323,43,[23,54,578,45],55)
     range      - range(end), range(start,end), range(start,end,step)
 
 
@@ -193,17 +193,17 @@ ADVANCED DATA TYPES
 * If we want to represent a group of objects as a single entity where
     duplicates are NOT allowed
     insertion order is NOT preserved
-    hetrogeneous objects are allowed
+    heterogeneous objects are allowed
     we should go for set data type
 
 * set is declared with curly braces {}
 
 * indexing and slicing are not applicable for set data type. Because set internally does not preserve the order of values
 
-* set is mutable as we can change the content (example  - mySet.add('New Value')). Which meanse based on our requiredment we can 
+* set is mutable as we can change the content (example  - mySet.add('New Value')). Which means based on our requirement we can
   increase or decrease the size
 
-* Even if we try to add duplicates values, no errors will be occured and the duplicated values will not be added
+* Even if we try to add duplicates values, no errors will be occurred and the duplicated values will not be added
 
 * Example:
     s = {10, 20, 30, 10, 20, 30, None, 'Hello', None}
@@ -211,7 +211,7 @@ ADVANCED DATA TYPES
     print(s) # {10, None, 20, 'Hello', 30}
 
     # indexing and slicing is not applicable
-    # Cannot access via elements or perform slice as there is no gurantee about the index position of elements
+    # Cannot access via elements or perform slice as there is no guarantee about the index position of elements
     print(s[0]) # TypeError: 'set' object is not subscriptable
     print(s[1:]) # TypeError: 'set' object is not subscriptable
 
@@ -224,8 +224,8 @@ ADVANCED DATA TYPES
 * bytes and byteArray
     bytes is immutable and byteArray is mutable
 
-* list and touple
-    list is mutable and touple is immutable
+* list and tuple
+    list is mutable and tuple is immutable
 
 * set and frozenset
     set is mutable and frozenset is immutable
@@ -235,15 +235,15 @@ ADVANCED DATA TYPES
 =============================================================================================
 
 * If we want to represent a group of objects as a single entity where
-    duplicates are NOT allowed
-    insertion order is NOT preserved
-    hetrogeneous objects are allowed
-    but do not need to change the content/ immutable nature is required
-    we should go for frozenset data type
+    - duplicates are NOT allowed
+    - insertion order is NOT preserved
+    - heterogeneous objects are allowed
+    - but do not need to change the content/ immutable nature is required
+  we should go for frozenset data type
 
 * set and frozenset are the same but the only difference is that set is mutable and frozenset is immutable
 
-    s = (10,20,30,40) # Initializing a set
+    s = (10, 20, 30, 40) # Initializing a set
     fs = frozenset(s) # Assigning available values to a frozenset
     print(fs)  # frozenset({40, 10, 20, 30})
 
@@ -260,7 +260,7 @@ ADVANCED DATA TYPES
 
 * dict type  is by default mutable (can change the content after initialization)
 
-* Both hetrogeneous keys abd valus are ALLOWED. Key and value can be any type of objects
+* Both heterogeneous keys abd values are ALLOWED. Key and value can be any type of objects
 
 * If we are trying to add en entry for an existing key-> value pair (where key is duplicated), Key will remain the same and associated existing value 
   will be replaced with the new value 
@@ -290,3 +290,67 @@ ADVANCED DATA TYPES
     # Initializing an empty set
     mySet = set()
     print(type(mySet)) # <class 'set'>
+
+=============================================================================================
+ > defaultdict data type (Default Dictionary)
+=============================================================================================
+
+* defaultdict is a specialized dictionary from Python's collections module that automatically handles missing keys.
+
+* Technically, defaultdict is a specialized subclass of the built-in dict class. It's designed to provide a default
+  value for keys that are not present in the dictionary.
+
+* Regular dict vs defaultdict
+
+    1. Regular dict requires key checking
+    --------------------------------------------------
+        regular_dict: dict = {}
+        # Need to check if key exists
+        if 'key' in regular_dict:
+            regular_dict['key'] += 1
+        else:
+            regular_dict['key'] = 1
+
+
+    2. defaultdict makes it simpler
+    --------------------------------------------------
+    from collections import defaultdict
+
+    auto_dict = defaultdict(int)
+    auto_dict['key'] += 1  # Just works!
+
+* Common factory functions for defaultdict:
+
+    # For counting
+    counter = defaultdict(int)    # Default value: 0
+
+    # For collecting items
+    groups = defaultdict(list)    # Default value: []
+
+    # For string operations
+    strings = defaultdict(str)    # Default value: ''
+
+* Code example with explanation
+
+    from collections import defaultdict
+
+    def count_occurrences(numbers: list):
+        counter = defaultdict(int)
+
+        for num in numbers:
+            counter[num] += 1
+
+        print(counter)
+
+    - This code elegantly counts byte occurrences - when a new byte is encountered, its count starts at 0 and gets
+      incremented, all automatically.
+
+ * Key benefits:
+
+    - Eliminates boilerplate key checking code
+    - Reduces errors from missing keys
+    - Makes counting and grouping operations clean and efficient
+    - Perfect for frequency counters, graphs, and multi-value dictionaries
+
+* The defaultdict is particularly useful in data processing, parsing, and any situation where you need to build up
+  collections or counts dynamically.

@@ -167,11 +167,11 @@ Slice operator :
   int type only
 
 
-Type casting (Type Coersion)
+Type casting (Type Coercion)
 -----------------------------------
 - Type casting is there between these data types (Converting from one type to another type)
 
-- Various inbuit functions for type coersion
+- Various inbuilt functions for type coercion
 
   int()
   float()
@@ -236,4 +236,3 @@ Type casting (Type Coersion)
       
       * Whenever we convert str to float, str type should contain either an integral value or a floating point value. str value sholuld be specified
         only in base 10
-

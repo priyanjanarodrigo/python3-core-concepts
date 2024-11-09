@@ -1,6 +1,10 @@
-from random import randint  # or we can use 'from random import randint' to import all
+print('Class 02 - Features and Limitations \n')
+
+# Importing the math module
 import math
-print('Python Practicals Class 2')
+
+# Importing randint from the random module
+from random import randint  # or we can use 'from random import * ' to import all
 
 # prints line after line from 0 to 2 (but not 3)
 for i in range(3):
@@ -21,12 +25,13 @@ print(type(val))
 id = 102
 
 
-def f1():
+def get_id():
     print("Your id is : ", id)
 
 
-f1()
+get_id()
 
+# Finding the square root of 4 using the math module sqrt() function
 print(math.sqrt(4))
 
 # Generating a sample OTP - One Time Password

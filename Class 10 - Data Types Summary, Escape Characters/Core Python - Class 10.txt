@@ -11,7 +11,7 @@
     s = set()
 
 list -->    []
-touple -->  ()
+tuple -->  ()
 
 1. In Python following 5 are considered as fundamental data types
     
@@ -49,14 +49,14 @@ touple -->  ()
 
 3. complex
     - Used to represent complex numbers (ex: val = 10.2+22.3j)
-    - Format/syntax is a+bj. 'j' is mandatory to use otherwise errors will be occured
+    - Format/syntax is a+bj. 'j' is mandatory to use otherwise errors will be occurred
     - a is considered as real part
     - b is considered as imaginary part
     - complex type is immutable
 
 4. bool
     - User to represent boolean values (True or False)
-    - Only allowed values are True or False. Or else errors will be occured
+    - Only allowed values are True or False. Or else errors will be occurred
     - Internally True is represented with 1 and False is represented as 0
     - Example : 
         print(True+True) # output is: 2
@@ -79,7 +79,7 @@ touple -->  ()
 ---------------------------------------------------------------------------------------------
 
 6. bytes
-    - Used to represent a group of byte values in between 0 to 256 range only
+    - Used to represent a group of byte values in between 0 and 256 range only
     - Ex :
         l = [12,32,256,34]
         b = bytes(l)
@@ -88,11 +88,11 @@ touple -->  ()
     - bytes is immutable, item assignment is not allowed
 
 7. byteArray
-    - Used to represent a group of byte values in between 0 to 256 range only where mutability is applicable
+    - Used to represent a group of byte values in between 0 and 256 range only where mutability is applicable
     - The same as bytes but byteArray is mutable
     - Ex:
         bArr = byteArray([12,32,34,54])
-    - These two types are generally used if we want to use binary data (audio,video and etc)
+    - These two types are generally used if we want to use binary data (audio,video and etc.)
 
 8. range
     - If we want to represent a range of values we can use range
@@ -116,23 +116,23 @@ touple -->  ()
         insertion order is preserved
         duplicates are allowed
         None is allowed
-        hetrogeneous objects are allowed
+        heterogeneous objects are allowed
         growable in nature
         we should use list data type
     - Ex:
         l = [123,5345,6578,460]
     - list is mutable
 
-10. touple 
+10. tuple
     - If we want to represent a group of object as a single entity where
         insertion order is preserved
         duplicates are allowed
         None is allowed
         hetrogeneous objects are allowed
         growable in nature
-        but immutablility should be there
-        we should use touple data type
-     - Only difference between list and toupple are list is mutable and touple is immutable
+        but immutability should be there
+        we should use tuple data type
+     - Only difference between list and tuple are list is mutable and tuple is immutable
      - Ex:
         t = (123,32,34,54565,23)
      - Once values are set, they are fixed values and cannot be modified
@@ -152,7 +152,7 @@ touple -->  ()
         s = {1,2,3,4,5}
 
         # Blank set initialization
-        s = set() # if delcared as s = {} it is not set but dict
+        s = set() # if declared as s = {} it is not set but dict
     - index,slicing concept are not applicable as order is not maintained by default
 
 12. forzenset
@@ -208,8 +208,8 @@ touple -->  ()
     \' - single quote representation within a srt enclosed with single quotes
     \" - double quote representation within a srt enclosed with double quotes
     \\ - representing a backslash
-    \v - verticcal tab
-    \r - carriage return (cursor will go to fitst position of the line)
+    \v - vertical tab
+    \r - carriage return (cursor will go to first position of the line)
     \b - backspace
     \f - formfeed (go to next page (just like page own))
 

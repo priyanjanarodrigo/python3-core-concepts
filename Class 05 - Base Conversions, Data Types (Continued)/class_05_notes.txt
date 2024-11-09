@@ -1,5 +1,5 @@
 =============================================================================================	
-* Data types -> continuted ......
+* Data types -> continued ......
 =============================================================================================
 
  - Java vs Python regarding size of a variable
@@ -11,14 +11,14 @@
       }
   }
 
- - Size of an object is not fied in any language. Size will be adjusted based on the assigned values
+ - Size of an object is not filed in any language. Size will be adjusted based on the assigned values
 
- - In Python is is declared as -> x = 10;
+ - In Python it is declared as -> x = 10;
 
  - In Python everything is an object only including data types. There are no primitives in Python.
    All data types have been implemented as objects
 
- - Therefore, size and range is not applicable in Python
+ - Therefore, size and range is not that much concerned in Python
 
 =============================================================================================	
 * Base conversions
@@ -66,19 +66,21 @@
     3. hex(<number>) function 
         - Used to convert any base to Hexadecimal form. Returns an int type value
         - Examples: 
-            1. Decimal to Hexadecomal 
+            1. Decimal to Hexadecimal
                 print(hex(10)) # output: 0xa
                 print(hex(234)) # output: 0xea
             
-            2. Binary to Hexadecomal
+            2. Binary to Hexadecimal
                 print(hex(0B111100001))  # output: 0x1e1
 
-            3. Octal to Hexadecomal
+            3. Octal to Hexadecimal
                 print(hex(0O765))  # output: 0x1f5
     ......................................................................................
 
 
- -  To convert from any Base to Decimal, we just have to assign the value to a vaiable, internally it is converted into Decimal form
+ -  To convert from any Base to Decimal, we just have to assign the value to a variable, internally it is converted into
+    Decimal form
+
     - Examples:
        
         value=0XBeef
@@ -113,7 +115,7 @@
     f=0O123.456 # INVALID
     f=0X123.456 # INVALID
 
-- Representing exponentials
+- Representing exponential values
     1.2e3 ===> 1.2 * (10*10*10)
                1.2 * 1000
                1200
@@ -123,8 +125,8 @@
         fValue = 1.2e3
         print(fValue) #output: 1200.0
 
-    With exponential we can represent such bigger values
-        pritn(12.2e100) # output: 1.22e+101
+    With exponential, we can represent such bigger values
+        print(12.2e100) # output: 1.22e+101
 
 
 =============================================================================================	
@@ -149,10 +151,10 @@
     q=10.5+2.3j
     print(q) # output : (10.5+2.3j)
 
-    - it is mandatory to use j character at the end. Otherwise it is invalid
+    - it is mandatory to use j character at the end. Otherwise, it is invalid
         # r = 2.5+4y # invalid
 
-    - it is mandatory to adere to the format as well
+    - it is mandatory to adhere to the format as well
         # f = 1.2+j20 # Invalid format (format is a+bj)
 
 * IMPORTANT
@@ -193,9 +195,10 @@
     
  
 - Getting the real value of a complex number with inbuilt variable/ attribute - real
-  [Keep in mind that the Format is a+bj, a is te real part, b is the imaginary part and j is - j^2 = -1  (j is equal to square root of -1)]
+  [Keep in mind that the Format is a+bj, a is the real part, b is the imaginary part and j is - j^2 = -1
+  (j is equal to square root of -1)]
 
-    v=5+2.2j
+    v = 5+ 2.2j
     print(v.real) # output: 5.0
 
 - Getting the imaginary value of a complex number with inbuilt variable/ attribute - imag
@@ -220,7 +223,7 @@
     print(isValid) # output: False
 
     # isValid = true # INVALID (nameError : name true is not defined)
-    # isValid = frue # INVALID (nameError : name true is not defined)
+    # isValid = true # INVALID (nameError : name true is not defined)
     # isValid = 'false' # Invalid  - This is considered as a str (String) value
 
  - Operations with bool values
@@ -261,8 +264,8 @@
 - Even if both single quotes and double quotes are accepted, it is recommended to use double quotes
   to define a context ofn a str (String)
 
-- Another importtant point is that if we are defining a multiline srt value, we have to use
-  triple single quotes ('''text''') or triple duoble quotes ("""text""") 
+- Another important point is that if we are defining a multiline srt value, we have to use
+  triple single quotes ('''text''') or triple double quotes ("""text""")
     
     myText = '''This is
                 a multi line
@@ -275,12 +278,12 @@
     #                str
 
 - This multi line declaration is useful for handling double quote or single quote included str values
-   So this reduces using additional excape characters within a str 
+   So this reduces using additional escape characters within a str
     
     feedback='''This "Durga Class Tutorial" is 'really important' for us '''
     print(feedback) # output: This "Durga Class Tutorial" is 'really important' for us
 
- - (Next secttions : slice operator. Separating into pices)
+ - (Next sections : slice operator. Separating into pieces)
 
     phrase='This is a small phrase'
     # Obtaining the characters from 2 to 15 index (includes 2nd index, excludes 15th index / 2 to (15-1))
