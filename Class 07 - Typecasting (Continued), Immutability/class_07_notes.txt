@@ -13,7 +13,7 @@
     ----------------------------------
 
         int to complex : 
-            print(complex(10)) # outoput: (10+0j)
+            print(complex(10)) # Output: (10+0j)
 
             print(complex(0B1111)) # output: (15+0j)
             print(complex(0O234)) # output: (156+0j)
@@ -118,6 +118,7 @@ Immutable vs fundamental data types
   a new object will be created by default. This non-changeable nature is nothing but immutability
 
 - mutable means changeable
+
 - immutable means non-changeable
 
 - Example
@@ -142,7 +143,7 @@ Immutable vs fundamental data types
                              |      |  
                              --------
 
-- Garbage collector will destroy unused objects/ objects without ny reference. 
+- Garbage collector will destroy unused objects/ objects without any reference.
 
 - Example 2: 
 
@@ -227,7 +228,7 @@ Immutable vs fundamental data types
     _________________________________________________________________________
 
 
-- In Python, same obeject  can be used for multiple references with same content. If one variable/reference
+- In Python, same object can be used for multiple references with same content. If one variable/reference
   is trying to change the content, others will not be affected (existing content will remain the same) but a new object 
   reference will be created with the new changes  
 

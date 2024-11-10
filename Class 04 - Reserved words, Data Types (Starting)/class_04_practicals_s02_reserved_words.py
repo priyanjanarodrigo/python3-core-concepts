@@ -93,6 +93,10 @@ listC = [1, 2, 3]  # obamaList is a different list with the same content
 print(f'\nlistA is listB : {listA is listB}')
 print(f'\nlistA is listC : {listA is listC}')
 
+sampleText: str = '  '
+isValidText = True if sampleText is not None and len(sampleText.strip()) > 0 else False
+print(f'\nisValidText: {isValidText}')
+
 print('\nwhile, for, break, continue, return, in and yield keywords\n-------------------------------------------------')
 
 counter = 0

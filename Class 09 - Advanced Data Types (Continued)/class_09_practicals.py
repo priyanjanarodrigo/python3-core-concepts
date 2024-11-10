@@ -46,7 +46,7 @@ print(type(l2))  # <class 'list'>
 
 # tuple data type --------------------------------------------------------------------------------------
 # By using parenthesis we can represent a tuple
-print('\ntouple data type ----------------------------')
+print('\ntuple data type ----------------------------')
 t: tuple = (12, 43, None, 56, False)  # This is a tuple
 l: list = [2, 3, 5, 7, 8]  # This is a list
 
@@ -154,8 +154,8 @@ print(type(s2))  # <class 'set'>
 
 testList = list([])  # Initializing a blank list (Just as an example)
 
-# testTouple = tuple(())  # Initializing a blank tuple # N/A
-testTouple = tuple(())
+# testTuple = tuple(())  # Initializing a blank tuple # N/A
+testTuple = tuple(())
 
 for i in range(5):
     s2.add(i)

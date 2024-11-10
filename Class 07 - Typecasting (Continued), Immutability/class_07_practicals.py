@@ -1,11 +1,13 @@
-print('Python Program : 7 - Core Python - Class 7')
+print('Class 07 - Typecasting(Continued), Immutability\n')
 
-# complex() function ----------------------------------------------------------------------
-print('\ncomplex() function - Form 1 complex(x)')
+# complex() functions
 
-print(complex(10))  # outoput: 10+0j
-# output: 10.12+0j (real part can be either integral or floating point)
-print(complex(10.12))
+print('\ncomplex() function - Form 1 complex(x) --------------------------------------------------------------------\n')
+
+print(f'complex(10) : {complex(10)}')  # Output: 10+0j
+
+# Real part can be either integral or floating point
+print(f'complex(10.12) : {complex(10.12)}\n')  # Output: complex(10.12) : (10.12+0j)
 
 print(complex(0B1111))  # output: (15+0j)
 print(complex(0O234))  # output: (156+0j)
@@ -20,7 +22,7 @@ print(complex('10.12'))  # output (10.12+0j)
 # print(complex('ten')) # ValueError: complex() arg is a malformed string
 # print(complex('0B1111')) # output: ValueError: complex() arg is a malformed string
 
-print('\ncomplex() function - Form 2 complex(x,y)')
+print('\ncomplex() function - Form 2 complex(x,y) ------------------------------------------------------------------\n')
 
 print(complex(10, 20))  # output : (10+20j)
 print(complex(True, False))  # output : (1+0j)
@@ -45,9 +47,9 @@ print(bool(0.0))  # output: False
 print(bool(0.1))  # output: True
 print(bool(0.01))  # output: True
 
-print(bool(10+20j))  # True
-print(bool(0+2j))  # True
-print(bool(0+0j))  # Flase
+print(bool(10 + 20j))  # True
+print(bool(0 + 2j))  # True
+print(bool(0 + 0j))  # Flase
 
 print(bool(''))  # output : False
 print(bool(''''''))  # output : False
@@ -57,7 +59,6 @@ print(bool(""""""))  # output : False
 print(bool('hello'))  # output:  True
 print(bool(None))  # output:  False
 print(bool(' '))  # output:  True (Space is also treated as a character)
-
 
 # str() function ---------------------------------------------------------------------------
 print('\nstr() function')
@@ -70,8 +71,7 @@ print(str(10.5))  # output: 10.5
 print(str(True))  # output: True
 print(str(False))  # output: False
 
-print(str(10+12.45j))  # output: (10+12.45j)
-
+print(str(10 + 12.45j))  # output: (10+12.45j)
 
 # immutability ---------------------------------------------------------------------------------------
 print('\nimmutability')
@@ -92,7 +92,6 @@ print(id(w1))  # output: 20139288
 print(id(w2))  # output: 20139288
 print(id(w3))  # output: 20139288
 print(id(w10000000))  # output: 20139288
-
 
 # Another example
 a = 10

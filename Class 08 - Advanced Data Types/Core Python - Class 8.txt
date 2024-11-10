@@ -68,7 +68,7 @@ Reusability
          > With respect to int type : 
          ----------------------------
             At the time of Python interpreter start, before the program executed 0 to 256 int type objects will be created but not more than that.
-            This is trhe most common range of using numbers and as those values are created initially, it is not required to crate them in runtime.
+            This is the most common range of using numbers and as those values are created initially, it is not required to crate them in runtime.
             Therefore, runtime performance is improved
             
             if our value is available within the range, then those values will be pointed to initialiy created references (a buffer from 0 to 256)

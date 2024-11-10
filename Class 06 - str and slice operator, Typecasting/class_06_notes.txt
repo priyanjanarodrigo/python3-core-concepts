@@ -1,19 +1,22 @@
 =============================================================================================	
-* str type and operations -> continuted ......
+* str type and operations -> continued ......
 =============================================================================================
 
-Slice operator :
+> Slice operator :
 ---------------------------------------------------------------------------------------------
 
-- Simply a slice is a small part, piece (You may call it a substring)
+- Simply a slice is a small part, piece (You may call it a substring). Slicing is nothing but accessing the sub part
+  of some string (piece of a string/ substring)
 
-- Slicing is also applicable for collection related data types also (Same concept)
+- Slicing is also applicable for collection related data types also (list, tuple) (Same concept)
 
-- In Python there are teo types of indexes. 
-    1. Possitive index [Left to Right -->]
+- In Python there are two types of indexes.
+
+    1. Positive index [Left to Right -->]
+
     2. Negative index  [Right to Left <--]
 
-- In Python, possitive index starts with 0 (Left to Right) and negative index starts with -1 (Right to Left)
+- In Python, positive index starts with 0 (Left to Right) and negative index starts with -1 (Right to Left)
 
    <---------------- [Negative index]
 
@@ -27,17 +30,20 @@ Slice operator :
 
     # Accessing index values
     s = 'MYTEXT'
-    
-    # Possitive indexs
-    print(s[0]) # output: M
-    print(s[3]) # output: E
-    print(s[5]) # output: T
+
+    print(f's[0] : {s[0]}')  # Output: s[0] : M
+    print(f's[3] : {s[3]}')  # Output: s[3] : E
+    print(f's[5] : {s[5]}')  # Output: s[5] : T
     # print(s[6])  # output: IndexError: string index out of range
 
-    # Negative indexs (starts with -1)
-    print(s[-2])  # output: X
-    print(s[-1])  # output: T
+    print(f's[-2] : {s[-2]}')  # Output: s[-2] : X
+    print(f's[-1] : {s[-1]}')  # Output: s[-1] : T
     # print(s[-7])  # output: IndexError: string index out of range
+
+- Collections like list and tuple also supports slicing with positive and negative indexes
+
+- This positive and negative indexes concept provides more flexibility to access the elements
+
 
 - Slice operator syntax 
 -----------------------------------
@@ -76,7 +82,7 @@ Slice operator :
 
             print(testString[-4:-1]) # This works as begin index is lower than end index (-4 is lower than -1). output: orl
 
-        * Slice opertor does not throw any index kind of errors. If we are directly going to access index which is out of the range, then only
+        * Slice operator does not throw any index kind of errors. If we are directly going to access index which is out of the range, then only
           we will get errors
 
         * # If we are providing a value which is out of the range to the slice operator, by default end index will be considered as the end of str
@@ -119,6 +125,7 @@ Slice operator :
 
           print(sVal[:-3]) # output: Sample str  
 
+
 - Slice operator - step
 -----------------------------------
 
@@ -130,7 +137,8 @@ Slice operator :
 
   print(myStr[1:10]) # we will get 1 to 9 characters
 
-  print(myStr[1:10:2]) # output: ugsfw (prints charactes from 1 to 9, stepping two indexes forward)
+  print(myStr[1:10:2]) # output: ugsfw (prints characters from 1 to 9, stepping two indexes forward)
+
 
 - String repetition operator
 -----------------------------------
@@ -148,7 +156,7 @@ Slice operator :
 
   strValue='this is a simple string'
 
-  print(len(strValue)) # outout : 23
+  print(len(strValue)) # Output : 23
 
 
 - IMPORTANT :

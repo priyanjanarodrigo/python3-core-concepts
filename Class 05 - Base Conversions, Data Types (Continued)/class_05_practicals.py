@@ -190,3 +190,10 @@ T  h  i  s     i  s     a     s  m  a  l  l     p  h  r  a  s  e
 '''
 
 print(f'phrase[2:15] : {phrase[2:15]}')  # Output: phrase[2:15] : is is a small
+
+text = 'Peter piper picked a peck of pickled peppers'
+print(f'\ntext : {text}')
+
+print(f'text[6:23] : {text[6:23]}')  # Output: text[0:15] : piper picked a pe
+
+x = True if text is not None and len(text.strip()) > 0 else False

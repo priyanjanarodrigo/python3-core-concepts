@@ -27,7 +27,7 @@ tuple -->  ()
  - Single characters are also represented with str type. There is no such thing as char in Python 
    (we can use single,double or triple quote also to represent a str)
 
-2. following are advanced data tyes 
+2. following are advanced data types
 
     bytes (immutable) and byteArray (mutable)
         Generally, these two can be used to represent binary data specially (images, video, audio files and etc)
