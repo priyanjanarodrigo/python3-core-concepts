@@ -428,8 +428,8 @@ describe_shape({"type": "triangle", "base": 5, "height": 10})
 print('\nmatch and case keywords based example 2 :\n')
 
 
-def check_value(value):
-    match value:
+def check_value(case_value):
+    match case_value:
         case 1:
             print("The value is one.")
         case "hello":

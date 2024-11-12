@@ -16,8 +16,8 @@ Summary from previous classes
  - Whenever  we change a python object reference, with those changes a new object will be created
 
  - Creation of an object is costly when it comes to time complexity. Therefore, When the object content is the same, 
-   existing available object references are pointed and reused (Creating a new object is not required if an existing object reference
-   is already available)
+   existing available object references are pointed and reused (Creating a new object is not required if an existing
+   object reference is already available)
 
         (Time consumed for related processes)
         checking for existing object : 1ns
@@ -25,7 +25,8 @@ Summary from previous classes
 
  - Performance will be improved and memory will be utilization will also be improved
 
- - Once we create an object, then we are not allwoed to change the content. Whenever we make a change a new object will be created 
+ - Once we create an object, then we are not allwoed to change the content. Whenever we make a change a new object will
+   be created
  
  - All fundamental data types in Python are immutable
 
@@ -53,7 +54,6 @@ Reusability
     * For float and complex, always a new object will be created. Reusability concept is not applicable
       for float and complex
 
-
     * The reason for range restriction
         v1=10
         v2=10
@@ -67,23 +67,25 @@ Reusability
 
          > With respect to int type : 
          ----------------------------
-            At the time of Python interpreter start, before the program executed 0 to 256 int type objects will be created but not more than that.
-            This is the most common range of using numbers and as those values are created initially, it is not required to crate them in runtime.
-            Therefore, runtime performance is improved
+            At the time of Python interpreter start, before the program is executed, 0 to 256 int type objects will be
+            created but not more than that. This is the most common range of using numbers and as those values are
+            created initially, it is not required to crate them in runtime. Therefore, runtime performance is improved.
             
-            if our value is available within the range, then those values will be pointed to initialiy created references (a buffer from 0 to 256)
+            if our value is available within the range, then those values will be pointed to initially created
+            references (a buffer from 0 to 256)
 
-            Range is strictly defined from 0 to 256 otherwise Python startup will be more costly and time consuming
+            Range is strictly defined from 0 to 256 otherwise Python startup will be more costly and time-consuming
         
         > With respect to bool
          ----------------------------
             In case of bool, only two objects have to be created. Those are True and False.
 
-            Therefore this is not that costly at startup
+            Therefore, this is not that costly at startup
         
         > With respect to str
          ----------------------------
-            In the case of str, it does not create an initial buffer, but Whenever we create string objects, the object will be created and reused
+            In the case of str, it does not create an initial buffer, but Whenever we create string objects, the object
+            will be created and reused
 
         > For float and complex
          ----------------------------
@@ -130,7 +132,8 @@ ADVANCED DATA TYPES [BEGINNING]
 - IMPORTANT
 --------------
     1. In the bytes data type, every value should be in the range of 0 to 256 only
-       Therefore, if we want to represent a group of values between 0 to 256 with immutability feature, then we should go for bytes
+       Therefore, if we want to represent a group of values between 0 and 256 with immutability feature, then we should
+       go for bytes
 
     2. In case of any out of range value (a value not within 0 to 256) , there will be an error 
         example: 

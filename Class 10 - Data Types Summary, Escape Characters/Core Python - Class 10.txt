@@ -13,7 +13,7 @@
 list -->    []
 tuple -->  ()
 
-1. In Python following 5 are considered as fundamental data types
+1. In Python, the following 5 are considered as fundamental data types
     
     int
     float
@@ -22,8 +22,10 @@ tuple -->  ()
     str
 
  - All fundamental data types are immutable
- - long data type is available only in python2 not in python3. Even if it is a big number, it is represented 
+
+ - long data type is available only in python2 but not in python3. Even if it is a big number, it is represented
    with int type in Python3
+
  - Single characters are also represented with str type. There is no such thing as char in Python 
    (we can use single,double or triple quote also to represent a str)
 
@@ -171,7 +173,7 @@ tuple -->  ()
         d = {100:'Priyanjana'}
         d[100] = 'Rodrigo'
     - dict is mutable
-    - Duplicate keys are allowed but values can be duplicated
+    - Duplicate keys are not allowed but values can be duplicated
     - Whenever we add a new entry where key is duplicated, key will remain the same and the old 
       value will be replaced with new value
 

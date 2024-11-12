@@ -40,3 +40,13 @@ print(randint(0, 9), randint(0, 9), randint(0, 9))
 # removing separated spaces with sep
 print(randint(0, 9), randint(0, 9), randint(0, 9),
       randint(0, 9), randint(0, 9), randint(0, 9), sep='')
+
+print('\n"end =" statement')
+# end=' ' is used to print the next statement in the same line
+print('Your OPT is :', end=f'{randint(0, 9)}{randint(0, 9)}{randint(0, 9)}{randint(0, 9)}\n')
+print('This is a new line. ', end='This is the end part of the line.\n')
+
+print('\n"sep =" statement')
+# sep=' ' is used to separate the values with the given separator
+print('this', 'is', 'a', 'separated', 'phrase', sep=':')
+print(randint(0, 9), randint(0, 9), randint(0, 9), sep=',')

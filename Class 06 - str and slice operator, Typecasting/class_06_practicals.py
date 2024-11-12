@@ -20,17 +20,19 @@ _________________________
 
 print(f's : {s}')  # Output: s : MYTEXT
 
-print('\nPositive indexes (starts with 0)')
+print('\nAccessing positive indexes (starts with 0)')
 print(f's[0] : {s[0]}')  # Output: s[0] : M
 print(f's[3] : {s[3]}')  # Output: s[3] : E
 print(f's[5] : {s[5]}')  # Output: s[5] : T
-# print(s[6])  # output: IndexError: string index out of range
+
+# print(s[6])  # Output: IndexError: string index out of range
 
 # Negative indexes (starts with -1)
-print('\nNegative indexes (starts with -1)')
+print('\nAccessing negative indexes (starts with -1)')
 print(f's[-2] : {s[-2]}')  # Output: s[-2] : X
 print(f's[-1] : {s[-1]}')  # Output: s[-1] : T
-# print(s[-7])  # output: IndexError: string index out of range
+
+# print(s[-7])  # Output: IndexError: string index out of range
 
 
 print('\nslice operator examples')
