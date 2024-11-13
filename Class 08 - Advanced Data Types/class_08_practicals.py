@@ -107,6 +107,7 @@ The bytearray data type can only store integers between 0 and 255 (inclusive)
 
 # list data type
 print('\nlist data type --------------------------------------------------------------------------------------------\n')
+
 l = []  # representing an empty list
 print(f'l = {l}')  # Output: l = [])
 print(f'type(l) : {type(l)}\n')  # Output: type(l) : <class 'list'>

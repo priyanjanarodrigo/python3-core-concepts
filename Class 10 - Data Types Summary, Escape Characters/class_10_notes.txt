@@ -177,6 +177,11 @@ tuple -->  ()
     - Whenever we add a new entry where key is duplicated, key will remain the same and the old 
       value will be replaced with new value
 
+14. defaultdict
+    - defaultdict is a specialized dictionary from Python's collections module that automatically handles missing keys.
+
+    - Technically, defaultdict is a specialized subclass of the built-in dict class. It's designed to provide a
+      default value for keys that are not present in the dictionary.
 
 > None data type
 ---------------------------------------------------------------------------------------------  
