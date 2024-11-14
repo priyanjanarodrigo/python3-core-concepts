@@ -206,15 +206,18 @@ Floor division by 0 (int and float examples)
 -------------------------
 Relational operators are used for comparing the values. It either returns True or False according to the condition.
 
+* Equality operators:
     1) ==	Equal to	                x == y
     2) !=	Not equal to	            x != y
+    
+* Relational operators:
     3) >	Greater than	            x > y
     4) <	Less than	                x < y
     5) >=	Greater than or equal to	x >= y
     6) <=	Less than or equal to	    x <= y
 '''
 
-print('\n2. Relational Operators -----------------------------------------------------------------------------------\n')
+print('\n* Relational Operators -----------------------------------------------------------------------------------\n')
 
 '''
 Behaviour of relational operators with respect to int and float
