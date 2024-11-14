@@ -46,7 +46,7 @@ tuple -->  ()
     - int is immutable
 
 2. float
-    - Used to represent numbers with decimal ponts (ex : pi = 3.14)
+    - Used to represent numbers with decimal points (ex : pi = 3.14)
     - float is immutable
 
 3. complex
