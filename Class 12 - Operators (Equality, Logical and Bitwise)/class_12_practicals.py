@@ -1,4 +1,4 @@
-print('Class 12 - Operators (Continued)')
+print('Class 12 - Operators (Equality, Logical and Bitwise)')
 
 '''
 * Equality Operators
@@ -395,6 +395,21 @@ ZeroDivisionError is raised.
 ------------------------------------------------------------------------------------------------------------------------
 1. Bitwise AND (&)
 ------------------------------------------------------------------------------------------------------------------------
+
+The Bitwise AND operator (&) works at the bit level. It compares each bit of two numbers and outputs 1 only if both 
+bits are 1; otherwise, it outputs 0.
+
+ * Truth Table for AND:
+
+ ________________________
+ |Bit A | Bit B | A & B |
+ ------------------------
+ |  0   |   0   |   0   |
+ |  0   |   1   |   0   |
+ |  1   |   0   |   0   |
+ |  1   |   1   |   1   |
+ ------------------------
+
 '''
 print('Bitwise AND (&)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
@@ -418,6 +433,19 @@ print(f'4 & 5 = {4 & 5}\n')  # Output: 4 & 5 : 4
 ------------------------------------------------------------------------------------------------------------------------
 2. Bitwise OR (|)
 ------------------------------------------------------------------------------------------------------------------------
+
+The Bitwise OR operator (|) works at the bit level. It compares each bit of two numbers and outputs 1 if either or both 
+bits are 1; otherwise, it outputs 0.
+
+ ________________________
+ |Bit A | Bit B | A | B |
+ ------------------------
+ |  0   |   0   |   0   |
+ |  0   |   1   |   1   |
+ |  1   |   0   |   1   |
+ |  1   |   1   |   1   |
+ ------------------------
+
 '''
 print('Bitwise OR (|)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
@@ -441,8 +469,26 @@ print(f'4 | 5 = {4 | 5}\n')  # Output: 4 | 5 : 5
 ------------------------------------------------------------------------------------------------------------------------
 3. Bitwise XOR (^)
 ------------------------------------------------------------------------------------------------------------------------
+
+ Bitwise XOR (exclusive OR) is an operator that works at the bit level. 
+
+ It compares each bit of two numbers and outputs a 1 if the corresponding bits are different, and a 0 if the 
+ bits are the same.
+
+ * Truth Table for XOR:
+
+ ________________________
+ |Bit A | Bit B | A ^ B |
+ ------------------------
+ |  0   |   0   |   0   |
+ |  0   |   1   |   1   |
+ |  1   |   0   |   1   |
+ |  1   |   1   |   0   |
+ ------------------------
+
 '''
 print('Bitwise XOR (^)\n')
+
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
 print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
 
@@ -463,6 +509,20 @@ print(f'4 ^ 5 = {4 ^ 5}\n')  # Output: 4 ^ 5 : 1
 '''
 ------------------------------------------------------------------------------------------------------------------------
 4. Bitwise Complement / NOT (~)
+
+ The Bitwise Complement operator (~) inverts all the bits of a number. Specifically, it changes each 1 to 0 and 
+ each 0 to 1. In Python, this is a one’s complement operation, but it is slightly adjusted due to the way integers 
+ are represented internally using two’s complement for signed integers.
+ 
+ Behavior
+
+    For a given number n, the bitwise complement is calculated as:
+
+     ~ n = -n - 1
+
+    This accounts for the two’s complement representation.
+    
+ The following are in depth explanations of the Bitwise Complement / NOT (~) operator.
 ------------------------------------------------------------------------------------------------------------------------
 '''
 print('Bitwise Complement / NOT (~)\n')
@@ -587,3 +647,80 @@ print(f'Binary value of 2 : {bin(2)}')  # Output: Binary value of 2 : 0b10
     * Therefore, the output for ~True is         ==>  -2
 '''
 print(f'~True = {~True}\n')  # Output: ~True : -2
+
+'''
+ IMPORTANT !
+ ===========
+ 
+ * Simple explanation of Bitwise Complement / NOT (~). Let's take a look at the behaviour again
+ 
+ * Simple formula to get the output:
+    ~n = -n - 1
+    
+    Example 2:
+        ~5 = -5 - 1
+        ~5 = -6
+    
+    Example 2:
+        ~-3 = -(-3) - 1
+        ~-3 = 3 - 1
+        ~(-3) = 2
+ 
+ * Behavior
+
+    For a given number n, the bitwise complement is calculated as:
+
+     ~ n = -n - 1
+
+    This accounts for the two’s complement representation.
+    
+ * Step-by-step Explanation for example: ~5
+    
+	1.	Convert 5 to binary:
+	    - 5 in binary (8-bit representation): 00000101
+	    
+	2.	Perform the complement operation:
+	    - Invert all bits: 11111010
+	        
+	3.	Understand the result:
+	    - In Python, ~5 means “the negative of (5 + 1)”, so the result is:
+          ~ 5 = -5 - 1
+          ~ 5 = -6
+'''
+n = 5
+result = ~n
+print(f"~{n} = {result}\n")  # Output: ~5 = -6
+
+'''
+Another Example with a Negative Number:
+
+Let’s try ~(-3):
+
+	1. Convert -3 to binary (8-bit representation):
+	    - For -3, Python uses two’s complement. Start with 3:
+	            3 in binary: 00000011
+	            Two’s complement of 3: invert all bits and add 1: 11111101
+	            
+	2. Perform the complement operation:
+	    - Invert all bits of 11111101: 00000010
+	    
+	3. Result:
+	    - The result in two’s complement representation is 2.
+'''
+n = -3
+result = ~n
+print(f"~{n} = {result}")  # Output: ~-3 = 2
+
+'''
+* Key Takeaways:
+
+	1.	Bit inversion: The ~ operator inverts all bits of the number.
+	2.	Signed adjustment: The result is adjusted for two’s complement representation.
+	3.	Practical formula: ~n = -n - 1.
+	
+* Side Note:
+
+    In Python, integers are not restricted to a specific bit size like 8-bit or 32-bit. Instead, Python integers (int) 
+    are arbitrarily large and dynamically scale based on the number’s value. However, for operations like bitwise 
+    complement (~), the behavior assumes a two’s complement representation of integers.
+'''
