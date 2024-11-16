@@ -455,74 +455,118 @@ print(f'4 ^ 5 = {4 ^ 5}\n')  # Output: 4 ^ 5 : 1
 print('Bitwise Complement / NOT (~)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
 print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
-
 '''
 (Hint - NOT gate, ~0 = 1, ~1 = 0). This is negation.
 
- - Internally 4 has a 32 bits in binary representation as 0000 0000 0000 0000 0000 0000 0000 0100
  
- - There, the first bit is considered as the sign bit (AKA the most significant bit). There, 0 indicates positive and 
-   1 indicates negative.
+    The binary 32bits representation of 4 is 0000 0000 0000 0000 0000 0000 0000 0001
+    
+    The first bit is considered as the sign bit (AKA the most significant bit). There, 0 indicates positive and 
+    1 indicates negative. In this case sign bit is 0, because 4 is a positive number.
  
- - Positive numbers are represented directly in binary form in the memory (like above) but negative numbers are 
-   represented in 2's complement form.
- 
-   32bit binary representation of 4  ==>  0000 0000 0000 0000 0000 0000 0000 0100
-   --------------------------------------------------------------------------------
-   ~4 (negation) in binary will be   ==>  1111 1111 1111 1111 1111 1111 1111 1011
-   
- - Now the sign bit is 1 after negation, so it is a negative number. And the remaining 31 bits are represented in '
-   2's complement form.
-   
-   
-      1            111 1111 1111 1111 1111 1111 1111 1011
-   sign bit                   Remaining 31 bits
+    Positive numbers are represented directly in binary form in the memory (like above) but negative numbers are 
+    represented in 2's complement form.
 
-   
- - To find the 2's complement form, we have to find 1's complement of the number and then add 1 to it.
-   (complement form means the opposite of the number)
- 
- - 1's complement of the remaining 31 bits ( 1's complement - 0s will be replaced with 1 and 1s will be replaced with 0)
-                Remaining 31 bits   ==>    111 1111 1111 1111 1111 1111 1111 1011
-                ------------------------------------------------------------------
-                1's Complement form ==>    000 0000 0000 0000 0000 0000 0000 0100
-                Add 1               ==>                                         1
-                ------------------------------------------------------------------
-                2's Complement form ==>     000 0000 0000 0000 0000 0000 0000 101
-            
- - So the complete 32bit internal representation including the sign bit also will be
-                
-                                            1000 0000 0000 0000 0000 0000 0000 101
-                                            
-- Now, the decimal value of the above 32bit binary representation is -5. (Value is minus because the sign bit is 1)
+    * 4 in binary is                        ==>     0000 0000 0000 0000 0000 0000 0000 0100
 
-- Decimal value of 1000 0000 0000 0000 0000 0000 0000 101 is -5. (101 = 5)
+    * ~4 (negation) in binary will be       ==>     1111 1111 1111 1111 1111 1111 1111 1011  
 
- Therefore, ~4 = -5
+    After negation, the sign bit is 1 (1st bit, most significant bit) which means it is a negative number.
+
+    The following is how a negative number is represented in 2's complement form.:
+    ..............................................................................
+
+    Sign bit is 1 (negative number)
+
+    The remaining 31 Bits are               ==>     111 1111 1111 1111 1111 1111 1111 1011
+    (This should be represented in 2's
+    complement form)
+
+    Representing Other 31 Bits: 111 1111 1111 1111 1111 1111 1111 1011 in 2's complement form:
+
+    Conversion Steps:
+        1. Flip all the bits (0s will be replaced with 1 and 1s will be replaced with 0) to get 1's complement form.
+
+        2. Add 1 to the 1's complement form to get 2's complement form.
+
+
+    Remaining 31 bits (Negated)                 ==>  111 1111 1111 1111 1111 1111 1111 1011
+    --------------------------------------------------------------------------------------- 
+    
+    1) 1's complement form (opposite of each)   ==>  000 0000 0000 0000 0000 0000 0000 0100
+    2) Add 1 (binary representation of 1)       ==>                                       1     
+    ---------------------------------------------------------------------------------------
+    2's complement form (after adding 1)        ==>  000 0000 0000 0000 0000 0000 0000 0101
+
+
+    * With that, 2's complement form of the rest of the 31 bits is 000 0000 0000 0000 0000 0000 0000 0101
+
+    * The Complete 32bit internal representation ==>  sign bit followed by 2's complement form of the rest of the 31 bits
+
+                                                 ==>  1000 0000 0000 0000 0000 0000 0000 0101
+
+    * The decimal value of the remaining 31bits  ==>  5
+      (000 0000 0000 0000 0000 0000 0000 0101)
+      (binary 101 is the decimal value of 5)
+
+    * Sign bt is 1, so the final value should be ==>  -5
+      minus. Which makes the final value -5
+
+    * Therefore, the output for ~4 is         ==>  -5
 '''
 print(f'~4 = {~4}\n')  # Output: ~4 : -5
 
+# Bitwise Complement / NOT (~) of True
+print(f'Binary value of True : {bin(True)}')  # Output: Binary value of True is 0b1
 '''
     True is internally represented as 1 and the 32bits representation is 0000 0000 0000 0000 0000 0000 0000 0001
+    (sign bit is 0, because 1 is a positive number)
     
-    1                       ==>     0000 0000 0000 0000 0000 0000 0000 0001
-    ~1                      ==>     1111 1111 1111 1111 1111 1111 1111 1110
+    * 1 in binary is                        ==>     0000 0000 0000 0000 0000 0000 0000 0001
     
-    Sign bit is 1, so it is a negative number.
+    * ~1 (negation) in binary will be       ==>     1111 1111 1111 1111 1111 1111 1111 1110  
     
-    Other 31 Bits are in 2's complement form  ==> 111 1111 1111 1111 1111 1111 1111 1110
-    -------------------------------------------------------------------------------------  
-    1's complement form                      ==>  000 0000 0000 0000 0000 0000 0000 0001
-    Add 1                                                                              1     
-    -------------------------------------------------------------------------------------
-    2's complement form                      ==>  000 0000 0000 0000 0000 0000 0000 0010
+    After negation, the sign bit is 1 (1st bit, most significant bit) which means it is a negative number.
+    
+    The following is how a negative number is represented in 2's complement form.:
+    ..............................................................................
+    
+    Sign bit is 1 (negative number)
+    
+    The remaining 31 Bits are               ==>     111 1111 1111 1111 1111 1111 1111 1110
+    (This should be represented in 2's
+    complement form)
+    
+    Representing Other 31 Bits: 111 1111 1111 1111 1111 1111 1111 1110 in 2's complement form:
+    
+    Conversion Steps:
+        1. Flip all the bits (0s will be replaced with 1 and 1s will be replaced with 0) to get 1's complement form.
+        
+        2. Add 1 to the 1's complement form to get 2's complement form.
+    
+    
+    Remaining 31 bits (Negated)                 ==>  111 1111 1111 1111 1111 1111 1111 1110
+    ---------------------------------------------------------------------------------------
+      
+    1) 1's complement form (opposite of each)   ==>  000 0000 0000 0000 0000 0000 0000 0001
+    2) Add 1 (binary representation of 1)       ==>                                       1     
+    ---------------------------------------------------------------------------------------
+    2's complement form (after adding 1)        ==>  000 0000 0000 0000 0000 0000 0000 0010
 
-     So the complete 32bit internal representation including the sign bit also will be
+
+    * With that, 2's complement form of the rest of the 31 bits is 000 0000 0000 0000 0000 0000 0000 0010
+
+    * The Complete 32bit internal representation ==>  sign bit followed by 2's complement form of the rest of the 31 bits
                 
-                                                1000 0000 0000 0000 0000 0000 0000 0010
+                                                 ==>  1000 0000 0000 0000 0000 0000 0000 0010
     
-    Decimal value of 1000 0000 0000 0000 0000 0000 0000 0010 is -2. (10 = 2)
-    
-    Therefore, ~True = -2
+    * The decimal value of the remaining 31bits  ==>  2
+      (000 0000 0000 0000 0000 0000 0000 0010)
+      (binary 10 is the decimal value of 2)
+      
+    * Sign bt is 1, so the final value should be ==>  -2
+      minus. Which makes the final value -2
+
+    * Therefore, the output for ~True is         ==>  -2
 '''
 print(f'~True = {~True}\n')  # Output: ~True : -2
