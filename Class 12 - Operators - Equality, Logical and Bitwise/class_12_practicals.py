@@ -1,4 +1,4 @@
-print('Class 12 - Operators (Equality, Logical and Bitwise)')
+print('Class 12 - Operators - Equality, Logical and Bitwise')
 
 '''
 * Equality Operators
