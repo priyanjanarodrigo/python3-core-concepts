@@ -176,6 +176,7 @@ print(f'not False and False : {not False and False}\n')  # Output: not False and
 print('Logical Operators with respect to non-bool type -------------------------------------------------------------\n')
 
 print('and operator with non-bool types')
+
 # Example 1:
 print(f'10 and 20 : {10 and 20}\n')  # Output: 10 and 20 : 20
 
@@ -190,6 +191,7 @@ print(f'10 and 20 : {10 and 20}\n')  # Output: 10 and 20 : 20
             - Then, the result is x.
             - Therefore, the result is 0.
 '''
+
 # Example 2:
 print(f'0 and 20 : {0 and 20}\n')  # Output: 0 and 20 : 0
 
@@ -203,6 +205,7 @@ print(f'0 and 20 : {0 and 20}\n')  # Output: 0 and 20 : 0
             - Then, the result is x.
             - Therefore, the result is [].
 '''
+
 # Example 3 :(Empty list, tuple, set, dictionary are considered as False)
 print(f'[] and 10 : {[] and 12}')  # Output: [] and 12 : []
 print(f'() and 10 : {() and 12}')  # Output: () and 12 : ()
@@ -218,6 +221,7 @@ print('{} and 10 : ', {} and 12, '\n')  # Output: {} and 12 :  {}
             - Then, the result is y.
             - Therefore, the result is 'hello'.
 '''
+
 # Example 4:
 print(f'1 and "hello" : {1 and "hello"}\n')  # Output: 1 and "hello" : hello
 
@@ -259,6 +263,7 @@ print(f'10 or 20 : {10 or 20}\n')  # Output: 10 or 20 : 10
             - Then, the result is y.
             - Therefore, the result is 20.
 '''
+
 # Example 2:
 print(f'0 or 20 : {0 or 20}\n')  # Output: 0 or 20 : 20
 
@@ -273,6 +278,7 @@ print(f'0 or 20 : {0 or 20}\n')  # Output: 0 or 20 : 20
             - Then, the result is y.
             - Therefore, the result is 20.
 '''
+
 # Example 3: (Empty list, tuple, set, dictionary are considered as False)
 print(f'[] or 10 : {[] or 12}')  # Output: [] or 12 : 12
 print(f'() or 10 : {() or 12}')  # Output: () or 12 : 12
@@ -289,6 +295,7 @@ print('{} or 10 : ', {} or 12, '\n')  # Output: {} or 12 :  12
             - Then, the result is x.
             - Therefore, the result is 1.
 '''
+
 # Example 4:
 print(f'1 or "hello" : {1 or "hello"}\n')  # Output: 1 or "hello" : 1
 
@@ -314,6 +321,7 @@ print('not operator with non-bool types')
     - Then, the result is False.
      - Therefore, the result is False.
 '''
+
 # Example 1:
 print(f'not 10 : {not 10}\n')  # Output: not 10 : False
 
@@ -384,8 +392,9 @@ ZeroDivisionError is raised.
 '''
 
 ''' 
+------------------------------------------------------------------------------------------------------------------------
 1. Bitwise AND (&)
--------------------
+------------------------------------------------------------------------------------------------------------------------
 '''
 print('Bitwise AND (&)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
@@ -406,8 +415,9 @@ print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
 print(f'4 & 5 = {4 & 5}\n')  # Output: 4 & 5 : 4
 
 '''
+------------------------------------------------------------------------------------------------------------------------
 2. Bitwise OR (|)
------------------
+------------------------------------------------------------------------------------------------------------------------
 '''
 print('Bitwise OR (|)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
@@ -428,8 +438,9 @@ print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
 print(f'4 | 5 = {4 | 5}\n')  # Output: 4 | 5 : 5
 
 '''
+------------------------------------------------------------------------------------------------------------------------
 3. Bitwise XOR (^)
-------------------
+------------------------------------------------------------------------------------------------------------------------
 '''
 print('Bitwise XOR (^)\n')
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
@@ -450,15 +461,18 @@ print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
 print(f'4 ^ 5 = {4 ^ 5}\n')  # Output: 4 ^ 5 : 1
 
 '''
+------------------------------------------------------------------------------------------------------------------------
 4. Bitwise Complement / NOT (~)
+------------------------------------------------------------------------------------------------------------------------
 '''
 print('Bitwise Complement / NOT (~)\n')
+
+# Bitwise Complement / NOT (~) of 4
 print(f'binary value of 4 : {bin(4)}')  # Output: binary value of 4 :  0b100
 print(f'binary value of 5 : {bin(5)}')  # Output: binary value of 5 :  0b101
 '''
 (Hint - NOT gate, ~0 = 1, ~1 = 0). This is negation.
 
- 
     The binary 32bits representation of 4 is 0000 0000 0000 0000 0000 0000 0000 0001
     
     The first bit is considered as the sign bit (AKA the most significant bit). There, 0 indicates positive and 
@@ -518,7 +532,10 @@ print(f'~4 = {~4}\n')  # Output: ~4 : -5
 
 # Bitwise Complement / NOT (~) of True
 print(f'Binary value of True : {bin(True)}')  # Output: Binary value of True is 0b1
+print(f'Binary value of 2 : {bin(2)}')  # Output: Binary value of 2 : 0b10
 '''
+(Hint - NOT gate, ~0 = 1, ~1 = 0). This is negation.
+
     True is internally represented as 1 and the 32bits representation is 0000 0000 0000 0000 0000 0000 0000 0001
     (sign bit is 0, because 1 is a positive number)
     
