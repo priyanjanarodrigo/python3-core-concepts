@@ -1,4 +1,4 @@
-print('Class 03 - Versions, Basic Concepts (Starting)\n')
+print('Class 03 - Versions, Basic Concepts\n')
 
 import math
 
@@ -24,3 +24,12 @@ def f2():
 
 
 f2()
+
+
+def print_text(msg: str):
+    print(f'Message:  {msg}')
+
+print_text(' Hello, welcome to Python programming!')
+
+if __name__ == '__main__':
+    print_text('Hello, welcome to Python programming!')

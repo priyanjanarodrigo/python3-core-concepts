@@ -1,4 +1,4 @@
-print('Class 07 - Typecasting(Continued), Immutability\n')
+print('Class 07 - Typecasting, Immutability\n')
 
 # complex() functions
 print('\ncomplex() function - Form 1 complex(x) --------------------------------------------------------------------\n')

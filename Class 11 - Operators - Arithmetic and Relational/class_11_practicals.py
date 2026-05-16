@@ -1,4 +1,4 @@
-print('\nClass 11 - Operators - Relational Operators\n')
+print('\nClass 11 - Operators - Arithmetic and Relational\n')
 
 '''
 ========================================================================================================================

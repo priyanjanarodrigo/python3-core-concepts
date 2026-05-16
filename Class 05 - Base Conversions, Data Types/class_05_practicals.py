@@ -1,4 +1,4 @@
-print('Class 05 - Base Conversions, Data Types (Continued)\n')
+print('Class 05 - Base Conversions, Data Types\n')
 
 print('Dynamically typed Programming Language - Example ------------------------------------------------------------\n')
 # Dynamically typed. The data type of a variable is considered based on the assigned value

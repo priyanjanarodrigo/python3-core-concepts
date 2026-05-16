@@ -1,4 +1,4 @@
-print('Class 09 - Advance Date Types (Continued)')
+print('Class 09 - Advance Date Types - Continued')
 
 from collections import defaultdict
 
